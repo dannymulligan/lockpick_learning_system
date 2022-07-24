@@ -3,12 +3,27 @@
 <svg
     id="Layer_1"
     width="8.5in"
-    height="11in">
+    height="11in"
+    xmlns="http://www.w3.org/2000/svg">
+
   <defs>
-    <style>.cls-1{fill:#ff0000;}
-    </style>
   </defs>
 
+
+<!-- ====================================================================== -->
+  <g id="alignment_pattern">
+    <line x1="-40" y1="0" x2="-50" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+    <line x1="0" y1="-40" x2="0" y2="-50" fill="none" stroke="black" stroke-width="2.0"/>
+    <line x1="40" y1="0" x2="50" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+    <line x1="0" y1="40" x2="0" y2="50" fill="none" stroke="black" stroke-width="2.0"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="black" stroke-width="2.0"/>
+    <path d="M 0,0 L -40,0 A 40,40 90 0 0 0,40 L 0,0" fill="black" stroke="none"/>
+    <path d="M 0,0 L 40,0 A 40,40 90 0 0 0,-40 L 0,0" fill="black" stroke="none"/>
+  </g>
+
+
+
+<!-- ====================================================================== -->
   <g id="key_pin_0">
     <path id="key_pin_0_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50, 95 Q 50,100 45,105 L 5,145 Q 0,150 -5,145 L -45,105 Q -50,100 -50, 95  L -50,5 Q -50,0 -45,0 L 0,0" fill="#ff00f0" stroke="black" stroke-width="2.0"/>
     <text x="0" y="100" text-anchor="middle" font-size="80">0</text>
@@ -60,6 +75,7 @@
   </g>
 
 
+<!-- ====================================================================== -->
   <path id="spring_0" d="M -50,-200.0  0,-200.0  C  80,-200.0
                             50,-210.0  0,-210.0  C -80,-210.0
                            -50,-220.0  0,-220.0  C  80,-220.0
@@ -291,8 +307,8 @@
         fill="none" stroke="black" stroke-width="4.0"/>
 
 
+<!-- ====================================================================== -->
   <path id="basic_pin" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-192 Q 50,-197 45,-197 L -45,-197 Q -50,-197 -50,-192 L -50, -8 Q -50,-3 -45,-3  L 0,-3" fill="#ffd020" stroke="black" stroke-width="2.0"/>
-
 
   <g id="spool_pin">
     <path id="spool_pin_mid" d="M 0,-30 L 35,-30 L 35,-170 L -35,-170 L -35,-30 L 0,-30" fill="#003090" stroke="black" stroke-width="2.0"/>
@@ -313,8 +329,8 @@
   </g>
 
 
-<!-- ====================================================================== -->
 
+<!-- ====================================================================== -->
   <!-- Example of pins with bottoms lined up (no key inserted) -->
   <g id="example1"  transform="translate(200,250)">
 
@@ -351,10 +367,10 @@
 
   </g>
 
-<!-- ====================================================================== -->
 
+<!-- ====================================================================== -->
   <!-- Example of pins with tops lined up (key inserted) -->
-  <g id="example2"  transform="translate(200,1000)">
+  <g id="example2"  transform="translate(200,800)">
 
     <g id="key_pin_4a" transform="translate(0,0)">
       <path id="key_pin_4_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,135 Q 50,140 45,145 L 5,185 Q 0,190 -5,185 L -45,145 Q -50,140 -50,135  L -50,5 Q -50,0 -45,0 L 0,0" fill="#ff40b0" stroke="black" stroke-width="2.0"/>
