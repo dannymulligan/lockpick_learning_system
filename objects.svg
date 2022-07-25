@@ -23,34 +23,34 @@
 <!-- ====================================================================== -->
   <g id="profile_outline">
     <circle cx="0" cy="0" r="1000" fill="none" stroke="black" stroke-width="2.0"/>
-    <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="2.0"/>
-    <path d="M 1200,1000  A 200,200 90 0 1 1000,1200
-             L -1000,1200  A 200,200 90 0 1 -1200,1000
-             L -1200,-2800  A 200,200 90 0 1 -1000,-3000
-             L 1000,-3000  A 200,200 90 0 1 1200,-2800
-             L 1200,1000" fill="none" stroke="black" stroke-width="2.0"/>
-    <path d="M 1100,-1100 L -1100,-1100 L -1100,-2520 L 1100,-2520 Z" fill="none" stroke="black" stroke-width="2.0"/>
-    <path d="M -1100,-2520 L -1100,-2900 L 1100,-2900 L 1100,-2520 Z" fill="none" stroke="black" stroke-width="2.0"/>
+    <circle cx="0" cy="-2750" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+    <path d="M 1300,1100  A 200,200 90 0 1 1100,1300
+             L -1100,1300  A 200,200 90 0 1 -1300,1100
+             L -1300,-2900  A 200,200 90 0 1 -1100,-3100
+             L 1100,-3100  A 200,200 90 0 1 1300,-2900
+             L 1300,1100" fill="none" stroke="black" stroke-width="2.0"/>
+    <path d="M 1100,-1200 L -1100,-1200 L -1100,-2620 L 1100,-2620 Z" fill="none" stroke="black" stroke-width="2.0"/>
+    <path d="M -1100,-2620 L -1100,-2900 L 1100,-2900 L 1100,-2620 Z" fill="none" stroke="black" stroke-width="2.0"/>
 
-    <g id="alignment_SE" transform="translate(1300,1300)">
+    <g id="alignment_SE" transform="translate(1400,1400)">
       <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
       <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
       <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
     </g>
 
-    <g id="alignment_SW" transform="translate(-1300,1300)">
+    <g id="alignment_SW" transform="translate(-1400,1400)">
       <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
       <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
       <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
     </g>
 
-    <g id="alignment_NE" transform="translate(1300,-3100)">
+    <g id="alignment_NE" transform="translate(1400,-3200)">
       <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
       <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
       <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
     </g>
 
-    <g id="alignment_NW" transform="translate(-1300,-3100)">
+    <g id="alignment_NW" transform="translate(-1400,-3200)">
       <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
       <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
       <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
