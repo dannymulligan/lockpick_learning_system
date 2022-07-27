@@ -128,3 +128,33 @@ def lock_holder(x=0, y=0, indent=0, alignment=True):
 
     result.append(template_back)
     return "\n".join(result)
+
+
+def spring(x=0, y=0, indent=0, length=0):
+    template = '''
+<path id="spring_{length}" transform="translate({x},{y})" d="
+    M -50,{y00:6.1f}  0,{y00:6.1f}  C  80,{y00:6.1f}     50,{y01:6.1f}  0,{y01:6.1f}  C -80,{y01:6.1f}    -50,{y02:6.1f}  0,{y02:6.1f}  C  80,{y02:6.1f}
+       50,{y03:6.1f}  0,{y03:6.1f}  C -80,{y03:6.1f}    -50,{y04:6.1f}  0,{y04:6.1f}  C  80,{y04:6.1f}     50,{y05:6.1f}  0,{y05:6.1f}  C -80,{y05:6.1f}
+      -50,{y06:6.1f}  0,{y06:6.1f}  C  80,{y06:6.1f}     50,{y07:6.1f}  0,{y07:6.1f}  C -80,{y07:6.1f}    -50,{y08:6.1f}  0,{y08:6.1f}  C  80,{y08:6.1f}
+       50,{y09:6.1f}  0,{y09:6.1f}  C -80,{y09:6.1f}    -50,{y10:6.1f}  0,{y10:6.1f}  C  80,{y10:6.1f}     50,{y11:6.1f}  0,{y11:6.1f}  C -80,{y11:6.1f}
+      -50,{y12:6.1f}  0,{y12:6.1f}  C  80,{y12:6.1f}     50,{y13:6.1f}  0,{y13:6.1f}  C -80,{y13:6.1f}    -50,{y14:6.1f}  0,{y14:6.1f}  C  80,{y14:6.1f}
+       50,{y15:6.1f}  0,{y15:6.1f}  C -80,{y15:6.1f}    -50,{y16:6.1f}  0,{y16:6.1f}  C  80,{y16:6.1f}     50,{y17:6.1f}  0,{y17:6.1f}  C -80,{y17:6.1f}
+      -50,{y18:6.1f}  0,{y18:6.1f}  C  80,{y18:6.1f}     50,{y19:6.1f}  0,{y19:6.1f}  C -80,{y19:6.1f}    -50,{y20:6.1f}  0,{y20:6.1f}  L  50,{y20:6.1f}
+    "  fill="none" stroke="black" stroke-width="4.0"/>
+'''
+    yb = -4.0 - 0.5*length
+    adj_template = template.format(length=length, x=x, y=y,
+        y00=yb* 0, y01=yb* 1, y02=yb* 2,
+        y03=yb* 3, y04=yb* 4, y05=yb* 5,
+        y06=yb* 6, y07=yb* 7, y08=yb* 8,
+        y09=yb* 9, y10=yb*10, y11=yb*11,
+        y12=yb*12, y13=yb*13, y14=yb*14,
+        y15=yb*15, y16=yb*16, y17=yb*17,
+        y18=yb*18, y19=yb*19, y20=yb*20)
+    result = []
+    for line in adj_template.splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+    return "\n".join(result)
