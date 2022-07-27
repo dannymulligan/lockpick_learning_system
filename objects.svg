@@ -313,7 +313,7 @@
 <!-- ====================================================================== -->
 <!-- 3 kinds of pins, plain, spool, and serrated -->
 
-   <path id="basic_pin" transform="translate(0,0)" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3" fill="#ffd020" stroke="black" stroke-width="2.0"/>
+    <path id="basic_pin" transform="translate(0,0)" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3" fill="#ffd020" stroke="black" stroke-width="2.0"/>
 
     <g id="spool_pin" transform="translate(100,0)">
         <path id="spool_pin_mid" d="M 0,-30 L 35,-30 L 35,-100 L -35,-100 L -35,-30 L 0,-30" fill="#003090" stroke="black" stroke-width="2.0"/>
