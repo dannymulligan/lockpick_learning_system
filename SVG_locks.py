@@ -18,7 +18,7 @@ def SVG_root(kind="front"):
         return tail
 
 
-def alignment_mark(x=0, y=0, indent=0, kind="empty"):
+def alignment_mark(x=0, y=0, kind="empty", indent=0):
     template_empty = '''
 <g id="alignment_empty" transform="translate({x},{y})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
@@ -97,7 +97,7 @@ def alignment_mark(x=0, y=0, indent=0, kind="empty"):
     return "\n".join(result)
 
 
-def lock_holder(x=0, y=0, indent=0, alignment=True):
+def lock_holder(x=0, y=0, alignment=True, indent=0):
     template_front = '''
 <g id="profile_outline" transform="translate({x},{y})">
     <circle cx="0" cy="0" r="1000" fill="none" stroke="black" stroke-width="2.0"/>
@@ -126,20 +126,20 @@ def lock_holder(x=0, y=0, indent=0, alignment=True):
         result.append(alignment_mark(x= 1400, y=-3200, indent=indent+1, kind="NE"))
         result.append(alignment_mark(x=-1400, y=-3200, indent=indent+1, kind="NW"))
 
-    result.append(template_back)
+    result.append(" "*4*indent + template_back)
     return "\n".join(result)
 
 
-def spring(x=0, y=0, indent=0, length=0):
+def spring(x=0, y=0, length=0, indent=0):
     template = '''
 <path id="spring_{length}" transform="translate({x},{y})" d="
-    M -50,{y00:6.1f}  0,{y00:6.1f}  C  80,{y00:6.1f}     50,{y01:6.1f}  0,{y01:6.1f}  C -80,{y01:6.1f}    -50,{y02:6.1f}  0,{y02:6.1f}  C  80,{y02:6.1f}
-       50,{y03:6.1f}  0,{y03:6.1f}  C -80,{y03:6.1f}    -50,{y04:6.1f}  0,{y04:6.1f}  C  80,{y04:6.1f}     50,{y05:6.1f}  0,{y05:6.1f}  C -80,{y05:6.1f}
-      -50,{y06:6.1f}  0,{y06:6.1f}  C  80,{y06:6.1f}     50,{y07:6.1f}  0,{y07:6.1f}  C -80,{y07:6.1f}    -50,{y08:6.1f}  0,{y08:6.1f}  C  80,{y08:6.1f}
-       50,{y09:6.1f}  0,{y09:6.1f}  C -80,{y09:6.1f}    -50,{y10:6.1f}  0,{y10:6.1f}  C  80,{y10:6.1f}     50,{y11:6.1f}  0,{y11:6.1f}  C -80,{y11:6.1f}
-      -50,{y12:6.1f}  0,{y12:6.1f}  C  80,{y12:6.1f}     50,{y13:6.1f}  0,{y13:6.1f}  C -80,{y13:6.1f}    -50,{y14:6.1f}  0,{y14:6.1f}  C  80,{y14:6.1f}
-       50,{y15:6.1f}  0,{y15:6.1f}  C -80,{y15:6.1f}    -50,{y16:6.1f}  0,{y16:6.1f}  C  80,{y16:6.1f}     50,{y17:6.1f}  0,{y17:6.1f}  C -80,{y17:6.1f}
-      -50,{y18:6.1f}  0,{y18:6.1f}  C  80,{y18:6.1f}     50,{y19:6.1f}  0,{y19:6.1f}  C -80,{y19:6.1f}    -50,{y20:6.1f}  0,{y20:6.1f}  L  50,{y20:6.1f}
+    M -50,{y00} 0,{y00} C  80,{y00}  50,{y01} 0,{y01} C -80,{y01} -50,{y02} 0,{y02} C  80,{y02}
+       50,{y03} 0,{y03} C -80,{y03} -50,{y04} 0,{y04} C  80,{y04}  50,{y05} 0,{y05} C -80,{y05}
+      -50,{y06} 0,{y06} C  80,{y06}  50,{y07} 0,{y07} C -80,{y07} -50,{y08} 0,{y08} C  80,{y08}
+       50,{y09} 0,{y09} C -80,{y09} -50,{y10} 0,{y10} C  80,{y10}  50,{y11} 0,{y11} C -80,{y11}
+      -50,{y12} 0,{y12} C  80,{y12}  50,{y13} 0,{y13} C -80,{y13} -50,{y14} 0,{y14} C  80,{y14}
+       50,{y15} 0,{y15} C -80,{y15} -50,{y16} 0,{y16} C  80,{y16}  50,{y17} 0,{y17} C -80,{y17}
+      -50,{y18} 0,{y18} C  80,{y18}  50,{y19} 0,{y19} C -80,{y19} -50,{y20} 0,{y20} L  50,{y20}
     "  fill="none" stroke="black" stroke-width="4.0"/>
 '''
     yb = -4.0 - 0.5*length
@@ -153,6 +153,57 @@ def spring(x=0, y=0, indent=0, length=0):
         y18=yb*18, y19=yb*19, y20=yb*20)
     result = []
     for line in adj_template.splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+    return "\n".join(result)
+
+
+def pin(x=0, y=0, kind="basic", length=0, indent=0):
+    template_basic = '''
+<path id="basic_pin" transform="translate({x},{y})" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+'''
+    template_spool = '''
+<g id="spool_pin" transform="translate(100,0)">
+    <path id="spool_pin_mid" d="M 0,-30 L 35,-30 L 35,-100 L -35,-100 L -35,-30 L 0,-30" fill="#003090" stroke="black" stroke-width="2.0"/>
+    <path id="spool_pin_top" d="M 0,-100 L 45,-100 Q 50,-100 50,-103 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50,-105 Q -50,-100 -45,-100  L 0,-100" fill="#0f50b0" stroke="black" stroke-width="2.0"/>
+    <path id="spool_pin_bot" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-25 Q 50,-30 45,-30 L -45,-30 Q -50,-30 -50,-25 L -50,-8 Q -50,-3 -45,-3  L 0,-3" fill="#0f50b0" stroke="black" stroke-width="2.0"/>
+</g>
+'''
+    template_serrated = '''
+<g id="serrated_pin" transform="translate(200,0)">
+    <path id="serrated_pin_base" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3" fill="#409020" stroke="black" stroke-width="2.0"/>
+    <path id="serrated_pin_line_0" d="M -50,-20 L 50,-20" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_1" d="M -50,-30 L 50,-30" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_2" d="M -50,-40 L 50,-40" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_3" d="M -50,-50 L 50,-50" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_4" d="M -50,-60 L 50,-60" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_5" d="M -50,-70 L 50,-70" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_6" d="M -50,-80 L 50,-80" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_7" d="M -50,-90 L 50,-90" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_8" d="M -50,-100 L 50,-100" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_line_9" d="M -50,-110 L 50,-110" fill="none" stroke="black" stroke-width="5.0"/>
+</g>
+'''
+    template_key = '''
+<g id="key_pin_{length}" transform="translate({x},{y})">
+    <path id="key_pin_{length}_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,{y0} Q 50,{y1} 45,{y2} L 5,{y3} Q 0,{y4} -5,{y3} L -45,{y2} Q -50,{y1} -50,{y0}  L -50,5 Q -50,0 -45,0 L 0,0"
+        fill="#ff{length}0{length}0" stroke="black" stroke-width="2.0"/>
+    <text x="0" y="100" text-anchor="middle" font-size="80">{length}</text>
+</g>
+'''
+
+    if   kind == "basic"   :  template = template_basic.format(x=x,y=y)
+    elif kind == "spool"   :  template = template_spool.format(x=x,y=y)
+    elif kind == "serrated":  template = template_serrated.format(x=x,y=y)
+    elif kind == "key"     :
+        y4 = 150 + 10*length
+        y3, y2, y1, y0 = y4-5, y4-45, y4-50, y4-55
+        template = template_key.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,length=length)
+    result = []
+    for line in template.splitlines():
         if line == '':
             result.append("\n")
         else:
