@@ -6,50 +6,20 @@ import SVG_locks
 with open("test.svg", "w") as SVG_file:
   SVG_file.write(SVG_locks.SVG_root("front"))
 
-  SVG_file.write(SVG_locks.alignment_mark(x=-250, y=-500, kind="filled", indent=1))
-  SVG_file.write(SVG_locks.alignment_mark(x=-500, y=-500, kind="empty", indent=1))
+  #SVG_file.write(SVG_locks.lock_holder(x=0, y=0, indent=1))
 
-  SVG_file.write(SVG_locks.lock_holder(x=0, y=0, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=0*2800, y=0*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=1*2800, y=0*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=2*2800, y=0*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=0*2800, y=1*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=1*2800, y=1*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=2*2800, y=1*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=0*2800, y=2*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=1*2800, y=2*4600, indent=1))
-  #SVG_file.write(SVG_locks.lock_holder(x=2*2800, y=2*4600, indent=1))
+  example1 = [("serrated", 0), ("serrated", 1), ("serrated", 2), ("serrated", 3), ("serrated", 4),
+              ("serrated", 5), ("serrated", 6), ("serrated", 7), ("serrated", 8), ("serrated", 9)]   # Example 1: All pins with bottoms lined up (no key inserted)
+  example2 = [("serrated", 0), ("serrated", 1), ("serrated", 2), ("serrated", 3), ("serrated", 4),
+              ("serrated", 5), ("serrated", 6), ("serrated", 7), ("serrated", 8), ("serrated", 9)]   # Example 2: All pins with tops lined up (correct key inserted)
+  example3 = [("basic", 7), ("basic", 8), ("basic", 7), ("basic", 0), ("basic", 1)]                  # Example 2: Five key pins 78701, with plain pins
+  example4 = [("spool", 9), ("spool", 0), ("serrated", 1), ("serrated", 2), ("basic", 5)]            # Example 4: Five key pins 90125, with assorted pins
+  example5 = [("basic", 1), ("spool", 4), ("serrated", 2), ("basic", 8), ("spool", 5), ("spool", 7)] # Example 5: Six key pins 142857, with assorted pins
 
-  SVG_file.write(SVG_locks.pin(x=  0, y=0, kind="key", length=0, indent=1))
-  SVG_file.write(SVG_locks.pin(x=100, y=0, kind="key", length=1, indent=1))
-  SVG_file.write(SVG_locks.pin(x=200, y=0, kind="key", length=2, indent=1))
-  SVG_file.write(SVG_locks.pin(x=300, y=0, kind="key", length=3, indent=1))
-  SVG_file.write(SVG_locks.pin(x=400, y=0, kind="key", length=4, indent=1))
-  SVG_file.write(SVG_locks.pin(x=500, y=0, kind="key", length=5, indent=1))
-  SVG_file.write(SVG_locks.pin(x=600, y=0, kind="key", length=6, indent=1))
-  SVG_file.write(SVG_locks.pin(x=700, y=0, kind="key", length=7, indent=1))
-  SVG_file.write(SVG_locks.pin(x=800, y=0, kind="key", length=8, indent=1))
-  SVG_file.write(SVG_locks.pin(x=900, y=0, kind="key", length=9, indent=1))
-
-  SVG_file.write(SVG_locks.spring(x=1500, y=-130, length=15, indent=1))
-  SVG_file.write(SVG_locks.spring(x=1400, y=-130, length=14, indent=1))
-  SVG_file.write(SVG_locks.spring(x=1300, y=-130, length=13, indent=1))
-  SVG_file.write(SVG_locks.spring(x=1200, y=-130, length=12, indent=1))
-  SVG_file.write(SVG_locks.spring(x=1100, y=-130, length=11, indent=1))
-  SVG_file.write(SVG_locks.spring(x=1000, y=-130, length=10, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 900, y=-130, length= 9, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 800, y=-130, length= 8, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 700, y=-130, length= 7, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 600, y=-130, length= 6, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 500, y=-130, length= 5, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 400, y=-130, length= 4, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 300, y=-130, length= 3, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 200, y=-130, length= 2, indent=1))
-  SVG_file.write(SVG_locks.spring(x= 100, y=-130, length= 1, indent=1))
-  SVG_file.write(SVG_locks.spring(x=   0, y=-130, length= 0, indent=1))
-
-  SVG_file.write(SVG_locks.pin(x=  0, y=0, kind="basic", indent=1))
-  SVG_file.write(SVG_locks.pin(x=100, y=0, kind="spool", indent=1))
-  SVG_file.write(SVG_locks.pin(x=200, y=0, kind="serrated", indent=1))
+  SVG_file.write(SVG_locks.lock(config="G0G1G2G3G4G5G6G7G8G9", key_inserted=False, x= 200, y=  500, indent=1))  # Example 1: All pins with bottoms lined up (no key inserted)
+  SVG_file.write(SVG_locks.lock(config="G0G1G2G3G4G5G6G7G8G9", key_inserted=True,  x= 200, y= 1100, indent=1))  # Example 2: All pins with tops lined up (correct key inserted)
+  SVG_file.write(SVG_locks.lock(config="P7P8P7P0P1"          , key_inserted=True,  x= 200, y= 1700, indent=1))  # Example 2: Five key pins 78701, with plain pins
+  SVG_file.write(SVG_locks.lock(config="S9S0G1G2P5"          , key_inserted=True,  x= 200, y= 2300, indent=1))  # Example 4: Five key pins 90125, with assorted pins
+  SVG_file.write(SVG_locks.lock(config="P1S4G2P8S5G7"        , key_inserted=True,  x=-300, y=-2000, indent=1))  # Example 5: Six key pins 142857, with assorted pins
 
   SVG_file.write(SVG_locks.SVG_root("tail"))

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+############################################################
 def SVG_root(kind="front"):
     front = """<!-- comment -->
 
@@ -18,6 +19,7 @@ def SVG_root(kind="front"):
         return tail
 
 
+############################################################
 def alignment_mark(x=0, y=0, kind="empty", indent=0):
     template_empty = '''
 <g id="alignment_empty" transform="translate({x},{y})">
@@ -97,6 +99,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
     return "\n".join(result)
 
 
+############################################################
 def lock_holder(x=0, y=0, alignment=True, indent=0):
     template_front = '''
 <g id="profile_outline" transform="translate({x},{y})">
@@ -130,6 +133,7 @@ def lock_holder(x=0, y=0, alignment=True, indent=0):
     return "\n".join(result)
 
 
+############################################################
 def spring(x=0, y=0, length=0, indent=0):
     template = '''
 <path id="spring_{length}" transform="translate({x},{y})" d="
@@ -160,20 +164,21 @@ def spring(x=0, y=0, length=0, indent=0):
     return "\n".join(result)
 
 
-def pin(x=0, y=0, kind="basic", length=0, indent=0):
-    template_basic = '''
-<path id="basic_pin" transform="translate({x},{y})" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+############################################################
+def pin(x=0, y=0, kind="plain", length=0, indent=0):
+    template_plain = '''
+<path id="plain_pin" transform="translate({x},{y})" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
     fill="#ffd020" stroke="black" stroke-width="2.0"/>
 '''
     template_spool = '''
-<g id="spool_pin" transform="translate(100,0)">
+<g id="spool_pin" transform="translate({x},{y})">
     <path id="spool_pin_mid" d="M 0,-30 L 35,-30 L 35,-100 L -35,-100 L -35,-30 L 0,-30" fill="#003090" stroke="black" stroke-width="2.0"/>
     <path id="spool_pin_top" d="M 0,-100 L 45,-100 Q 50,-100 50,-103 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50,-105 Q -50,-100 -45,-100  L 0,-100" fill="#0f50b0" stroke="black" stroke-width="2.0"/>
     <path id="spool_pin_bot" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-25 Q 50,-30 45,-30 L -45,-30 Q -50,-30 -50,-25 L -50,-8 Q -50,-3 -45,-3  L 0,-3" fill="#0f50b0" stroke="black" stroke-width="2.0"/>
 </g>
 '''
     template_serrated = '''
-<g id="serrated_pin" transform="translate(200,0)">
+<g id="serrated_pin" transform="translate({x},{y})">
     <path id="serrated_pin_base" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3" fill="#409020" stroke="black" stroke-width="2.0"/>
     <path id="serrated_pin_line_0" d="M -50,-20 L 50,-20" fill="none" stroke="black" stroke-width="5.0"/>
     <path id="serrated_pin_line_1" d="M -50,-30 L 50,-30" fill="none" stroke="black" stroke-width="5.0"/>
@@ -190,22 +195,57 @@ def pin(x=0, y=0, kind="basic", length=0, indent=0):
     template_key = '''
 <g id="key_pin_{length}" transform="translate({x},{y})">
     <path id="key_pin_{length}_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,{y0} Q 50,{y1} 45,{y2} L 5,{y3} Q 0,{y4} -5,{y3} L -45,{y2} Q -50,{y1} -50,{y0}  L -50,5 Q -50,0 -45,0 L 0,0"
-        fill="#ff{length}0{length}0" stroke="black" stroke-width="2.0"/>
+        fill="#ff{color0:02x}{color1:02x}" stroke="black" stroke-width="2.0"/>
     <text x="0" y="100" text-anchor="middle" font-size="80">{length}</text>
 </g>
 '''
 
-    if   kind == "basic"   :  template = template_basic.format(x=x,y=y)
+    if   kind == "plain"   :  template = template_plain.format(x=x,y=y)
     elif kind == "spool"   :  template = template_spool.format(x=x,y=y)
     elif kind == "serrated":  template = template_serrated.format(x=x,y=y)
     elif kind == "key"     :
         y4 = 150 + 10*length
         y3, y2, y1, y0 = y4-5, y4-45, y4-50, y4-55
-        template = template_key.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,length=length)
+        template = template_key.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,length=length,color0=length*16,color1=255-length*16)
     result = []
     for line in template.splitlines():
         if line == '':
             result.append("\n")
         else:
             result.append(" "*4*indent + line)
+    return "\n".join(result)
+
+
+############################################################
+def lock (config, key_inserted=True, x=0, y=0, indent=0):
+    template_front = '''
+<g id="lock_{config}" transform="translate({x},{y})">
+    <line x1="-100" y1="-225" x2="{xr}" y2="-225" fill="none" stroke="black" stroke-width="5.0"/>
+    <line x1="{xl}" y1="0" x2="{xr}" y2="0" fill="none" stroke="black" stroke-width="5.0"/>
+'''
+    template_tail = "</g>\n"
+    slots = len(config)//2
+    result = []
+    for line in template_front.format(x=x,y=y,xl=-100,xr=150*slots-50,config=config).splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+
+    for (offset,kind,key) in [(i, config[i*2], config[i*2+1]) for i in range(len(config)//2)]:
+        if   kind == "P":  kind = "plain"
+        elif kind == "S":  kind = "spool"
+        elif kind == "G":  kind = "serrated"
+
+        if key_inserted:
+            # Key inserted, tops of key pins line up with barrel
+            result.append(pin(x=offset*150, y=0, kind="key", length=int(key), indent=indent+1))
+            result.append(pin(x=offset*150, y=0, kind=kind, indent=indent+1))
+            result.append(spring(x=offset*150, y=-130, length=1, indent=indent+1))
+        else:
+            # Key not inserted, bottoms of key pins line up with each other
+            result.append(pin(x=offset*150, y=110-10*int(key), kind="key", length=int(key), indent=indent+1))
+            result.append(pin(x=offset*150, y=110-10*int(key), kind=kind, indent=indent+1))
+            result.append(spring(x=offset*150, y=-20-10*int(key), length=12-int(key), indent=indent+1))
+    result.append(" "*4*indent + "</g>\n")
     return "\n".join(result)
