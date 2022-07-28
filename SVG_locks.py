@@ -20,9 +20,9 @@ def SVG_root(kind="front"):
 
 
 ############################################################
-def alignment_mark(x=0, y=0, kind="empty", indent=0):
+def alignment_mark(kind="empty", x=0, y=0, scale=1.0, indent=0):
     template_empty = '''
-<g id="alignment_empty" transform="translate({x},{y})">
+<g id="alignment_empty" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
     <path d="
@@ -35,7 +35,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 </g>
 '''
     template_filled = '''
-<g id="alignment_filled" transform="translate({x},{y})">
+<g id="alignment_filled" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
     <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
@@ -44,7 +44,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 </g>
 '''
     template_SE = '''
-<g id="alignment_SE" transform="translate({x},{y})">
+<g id="alignment_SE" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
@@ -54,7 +54,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 </g>
 '''
     template_SW = '''
-<g id="alignment_SW" transform="translate({x},{y})">
+<g id="alignment_SW" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
@@ -64,7 +64,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 </g>
 '''
     template_NE = '''
-<g id="alignment_NE" transform="translate({x},{y})">
+<g id="alignment_NE" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
@@ -74,7 +74,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 </g>
 '''
     template_NW = '''
-<g id="alignment_NW" transform="translate({x},{y})">
+<g id="alignment_NW" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
     <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
@@ -84,12 +84,12 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 </g>
 '''
 
-    if   kind == "empty" :  template = template_empty.format(x=x,y=y)
-    elif kind == "filled":  template = template_filled.format(x=x,y=y)
-    elif kind == "SE"    :  template = template_SE.format(x=x,y=y)
-    elif kind == "SW"    :  template = template_SW.format(x=x,y=y)
-    elif kind == "NE"    :  template = template_NE.format(x=x,y=y)
-    elif kind == "NW"    :  template = template_NW.format(x=x,y=y)
+    if   kind == "empty" :  template = template_empty.format (x=x, y=y, scale=scale)
+    elif kind == "filled":  template = template_filled.format(x=x, y=y, scale=scale)
+    elif kind == "SE"    :  template = template_SE.format    (x=x, y=y, scale=scale)
+    elif kind == "SW"    :  template = template_SW.format    (x=x, y=y, scale=scale)
+    elif kind == "NE"    :  template = template_NE.format    (x=x, y=y, scale=scale)
+    elif kind == "NW"    :  template = template_NW.format    (x=x, y=y, scale=scale)
     result = []
     for line in template.splitlines():
         if line == '':
@@ -100,7 +100,7 @@ def alignment_mark(x=0, y=0, kind="empty", indent=0):
 
 
 ############################################################
-def spring(x=0, y=0, length=0, indent=0):
+def spring(length=0, x=0, y=0, scale=0.0, indent=0):
     template = '''
 <path id="spring_{length}" transform="translate({x},{y})" d="
     M -50,{y00} 0,{y00} C  80,{y00}  50,{y01} 0,{y01} C -80,{y01} -50,{y02} 0,{y02} C  80,{y02}
@@ -131,9 +131,10 @@ def spring(x=0, y=0, length=0, indent=0):
 
 
 ############################################################
-def pin(x=0, y=0, kind="plain", length=0, indent=0):
+def pin(kind="plain", length=0, x=0, y=0, scale=0.0, indent=0):
     template_plain = '''
-<path id="plain_pin" transform="translate({x},{y})" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+<path id="plain_pin" transform="translate({x},{y})"
+    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
     fill="#ffd020" stroke="black" stroke-width="2.0"/>
 '''
     template_spool = '''
@@ -159,8 +160,8 @@ def pin(x=0, y=0, kind="plain", length=0, indent=0):
 </g>
 '''
     template_key = '''
-<g id="key_pin_{length}" transform="translate({x},{y})">
-    <path id="key_pin_{length}_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,{y0} Q 50,{y1} 45,{y2} L 5,{y3} Q 0,{y4} -5,{y3} L -45,{y2} Q -50,{y1} -50,{y0}  L -50,5 Q -50,0 -45,0 L 0,0"
+<g id="pin_{length}" transform="translate({x},{y})">
+    <path id="pin_{length}_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,{y0} Q 50,{y1} 45,{y2} L 5,{y3} Q 0,{y4} -5,{y3} L -45,{y2} Q -50,{y1} -50,{y0}  L -50,5 Q -50,0 -45,0 L 0,0"
         fill="#ff{color0:02x}{color1:02x}" stroke="black" stroke-width="2.0"/>
     <text x="0" y="100" text-anchor="middle" font-size="80">{length}</text>
 </g>
@@ -183,12 +184,12 @@ def pin(x=0, y=0, kind="plain", length=0, indent=0):
 
 
 ############################################################
-def lock (config, key_inserted=True, x=0, y=0, indent=0):
+def lock(config, key_inserted=True, x=0, y=0, scale=1.0, indent=0):
     template_front = '''
-<g id="lock_{config}" transform="translate({x},{y})">
-    <line x1="{xl}" y1="-225" x2="{xr}" y2="-225" fill="none" stroke="black" stroke-width="5.0"/>
-    <line x1="{xl}" y1="0" x2="{xr}" y2="0" fill="none" stroke="black" stroke-width="5.0"/>
-    <text x="{xc}" y="1000" text-anchor="middle" font-size="80">{config}</text>
+<g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
+    <path d="M {xl},-225 {xr},-225  {xr},-235 {xl},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+    <line x1="{xl}" y1="0" x2="{xr}" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+    <text x="{xc}" y="850" text-anchor="middle" font-size="120">{config}</text>
 '''
     template_tail = "</g>\n"
     slots = len(config)//2
@@ -198,8 +199,7 @@ def lock (config, key_inserted=True, x=0, y=0, indent=0):
         config_spec = config
 
     result = []
-    #for line in template_front.format(x=x,y=y,xl=-100,xc=75*slots-75,xr=150*slots-50,config=config_spec).splitlines():
-    for line in template_front.format(x=x,y=y,xl=-150*(slots/2.0),xc=0,xr=150*(slots/2.0),config=config_spec).splitlines():
+    for line in template_front.format(x=x,y=y,xl=-150*(slots/2.0)-50,xc=0,xr=150*(slots/2.0)+50,scale=scale,config=config_spec).splitlines():
         if line == '':
             result.append("\n")
         else:
@@ -212,50 +212,77 @@ def lock (config, key_inserted=True, x=0, y=0, indent=0):
 
         if key_inserted:
             # Key inserted, tops of key pins line up with barrel
-            result.append(pin(x=offset, y=0, kind="key", length=int(key), indent=indent+1))
-            result.append(pin(x=offset, y=0, kind=kind, indent=indent+1))
-            result.append(spring(x=offset, y=-130, length=1, indent=indent+1))
+            result.append(pin(kind="key", length=int(key), x=offset, y=0, indent=indent+1))
+            result.append(pin(kind=kind, x=offset, y=0, indent=indent+1))
+            result.append(spring(length=1, x=offset, y=-130, indent=indent+1))
         else:
             # Key not inserted, bottoms of key pins line up with each other
-            result.append(pin(x=offset, y=110-10*int(key), kind="key", length=int(key), indent=indent+1))
-            result.append(pin(x=offset, y=110-10*int(key), kind=kind, indent=indent+1))
-            result.append(spring(x=offset, y=-20-10*int(key), length=12-int(key), indent=indent+1))
+            result.append(pin(kind="key", length=int(key), x=offset, y=110-10*int(key), indent=indent+1))
+            result.append(pin(kind=kind, x=offset, y=110-10*int(key), indent=indent+1))
+            result.append(spring(length=12-int(key), x=offset, y=-20-10*int(key), indent=indent+1))
     result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->\n".format(config=config_spec))
     return "\n".join(result)
 
 
 ############################################################
-def lock_holder(config, key_inserted=True, x=0, y=0, alignment=True, indent=0):
+def key(config, x=0, y=0, scale=1.0, indent=0):
     template_front = '''
-<g id="profile_outline" transform="translate({x},{y})">
-    <circle cx="0" cy="0" r="1000" fill="none" stroke="black" stroke-width="2.0"/>
-    <circle cx="0" cy="-2750" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+<g id="key_{config}" transform="translate({x} {y}) scale({scale} {scale})">
+    <line x1="{xl}" y1="400" x2="{xr}" y2="400" fill="none" stroke="black" stroke-width="2.0"/>
+    <line x1="{xr}" y1="400" x2="{xr}" y2="350" fill="none" stroke="black" stroke-width="2.0"/>
+'''
+
+    slots = len(config)//2
+    config_spec = [config[2*i+1] for i in range(slots)]
+    result = []
+
+    for line in template_front.format(x=x,y=y,xl=-150*(slots/2.0),xr=150*(slots/2.0),scale=scale,config="".join(config_spec)).splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+
+    for (offset,pin) in [(150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
+        result.append(" "*4*indent + '    <line x1="{xl}" y1="{y}" x2="{xr}" y2="{y}" fill="none" stroke="black" stroke-width="2.0"/>'.format(xl=offset-50,xr=offset+50,y=250+10*pin,config="".join(config_spec)))
+
+    result.append(" "*4*indent + "</g>  <!-- id=\"key_{config}\" -->\n".format(config="".join(config_spec)))
+    return "\n".join(result)
+
+
+############################################################
+def lock_holder(config, key_inserted=True, alignment=True, x=0, y=0, scale=1.0, indent=0):
+    template_front = '''
+<g id="profile_outline" transform="translate({x} {y}) scale({scale} {scale})">
+    <circle cx="0" cy="0" r="1000" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
-        M 1300,1100  A 200,200 90 0 1 1100,1300
-        L -1100,1300  A 200,200 90 0 1 -1300,1100
-        L -1300,-2900  A 200,200 90 0 1 -1100,-3100
-        L 1100,-3100  A 200,200 90 0 1 1300,-2900
-        L 1300,1100" fill="none" stroke="black" stroke-width="2.0"/>
-    <path d="M 1100,-1200 L -1100,-1200 L -1100,-2620 L 1100,-2620 Z" fill="none" stroke="black" stroke-width="2.0"/>
-    <path d="M -1100,-2620 L -1100,-2900 L 1100,-2900 L 1100,-2620 Z" fill="none" stroke="black" stroke-width="2.0"/>
+        M 1300,1000  A 200,200 90 0 1 1100,1200
+        L -1100,1200  A 200,200 90 0 1 -1300,1000
+        L -1300,-2800  A 200,200 90 0 1 -1100,-3000
+        L 1100,-3000  A 200,200 90 0 1 1300,-2800
+        L 1300,1000" fill="none" stroke="black" stroke-width="5.0"/>
+    <path d="M 1100,-1100 L -1100,-1100 L -1100,-2520 L 1100,-2520 Z" fill="none" stroke="black" stroke-width="2.0"/>
+    <path d="M -1100,-2520 L -1100,-2800 L 1100,-2800 L 1100,-2520 Z" fill="none" stroke="black" stroke-width="2.0"/>
 '''
     template_back = "</g>  <!-- id=\"profile_outline\" -->\n"
 
 
     result = []
-    for line in template_front.format(x=x,y=y).splitlines():
+    for line in template_front.format(x=x,y=y,scale=scale).splitlines():
         if line == '':
             result.append("\n")
         else:
             result.append(" "*4*indent + line)
 
     if alignment:
-        result.append(alignment_mark(x= 1300, y= 1300, indent=indent+1, kind="SE"))
-        result.append(alignment_mark(x=-1300, y= 1300, indent=indent+1, kind="SW"))
-        result.append(alignment_mark(x= 1300, y=-3100, indent=indent+1, kind="NE"))
-        result.append(alignment_mark(x=-1300, y=-3100, indent=indent+1, kind="NW"))
+        result.append(alignment_mark(kind="SE", x= 1300, y= 1200, indent=indent+1))
+        result.append(alignment_mark(kind="SW", x=-1300, y= 1200, indent=indent+1))
+        result.append(alignment_mark(kind="NE", x= 1300, y=-3000, indent=indent+1))
+        result.append(alignment_mark(kind="NW", x=-1300, y=-3000, indent=indent+1))
 
-    result.append(lock(config=config, key_inserted=key_inserted, x=0, y=-2250, indent=indent+1))
+    result.append(lock(config=config, key_inserted=key_inserted, x=0, y=-2100, indent=indent+1))
+    if key_inserted:
+        result.append(key(config=config, x=0, y=-2200, indent=indent+1))
 
     result.append(" "*4*indent + template_back)
     return "\n".join(result)
