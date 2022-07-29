@@ -285,7 +285,7 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
 def lock_holder(config, descr="", alignment=True, x=0.0, y=0.0, scale=1.0, indent=0):
     template_front = '''
 <g id="lock_holder" transform="translate({x} {y}) scale({scale} {scale})">
-    <circle cx="0" cy="-100" r="1000" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-100" r="920" fill="none" stroke="black" stroke-width="5.0"/>
     <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="5.0"/>
     <text x="0" y="1100" text-anchor="middle" font-size="200">{descr}</text>
     <path d="
