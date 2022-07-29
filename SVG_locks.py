@@ -323,7 +323,7 @@ def lock_holder(config, descr="", alignment=True, x=0.0, y=0.0, scale=1.0, inden
 
 
 ############################################################
-def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, indent=0):
+def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
     template_front_plain = '''
 <g id="lock_holder_cut_plain" transform="translate({x} {y}) scale({scale} {scale})">
     <circle cx="0" cy="-100" r="1000" fill="none" stroke="black" stroke-width="5.0"/>
@@ -347,7 +347,7 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, indent=0):
         L 1300,1000" fill="none" stroke="black" stroke-width="5.0"/>
 '''
     template_front_lever = '''
-<g id="lock_holder_cut_lever" transform="translate({x} {y}) scale({scale} {scale})">
+<g id="lock_holder_cut_lever" transform="translate({x} {y}) scale({scale} {scale}) rotate({rotate})">
     <ellipse cx="0" cy="-400" rx="400" ry="2400" fill="none" stroke="black" stroke-width="5.0"/>
     <circle cx="80" cy="1500" r="25" fill="none" stroke="black" stroke-width="5.0"/>
     <circle cx="-80" cy="1500" r="25" fill="none" stroke="black" stroke-width="5.0"/>
@@ -359,7 +359,7 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, indent=0):
     elif kind == ("lever"):  template = template_front_lever
 
     result = []
-    for line in template.format(x=x,y=y,scale=scale).splitlines():
+    for line in template.format(x=x,y=y,scale=scale,rotate=rotate).splitlines():
         if line == '':
             result.append("\n")
         else:
@@ -371,11 +371,11 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, indent=0):
 
 ############################################################
 def print_sheet(configs, kind="front", pagesize="US-letter", indent=0):
-    template_front = '''<g id="print_sheet_{kind}_{pagesize}" transform="translate({x} {y}) scale({scale} {scale})">\n'''
+    template_front = '''<g id="print_sheet_{kind}_{pagesize}"">\n'''
     template_back = "</g>  <!-- id=\"print_sheet_{kind}_{pagesize}\" -->\n"
 
     result = []
-    for line in template_front.format(kind=kind,pagesize=pagesize,x=x,y=y,scale=scale).splitlines():
+    for line in template_front.format(kind=kind,pagesize=pagesize).splitlines():
         if line == '':
             result.append("\n")
         else:
@@ -405,6 +405,7 @@ def print_sheet(configs, kind="front", pagesize="US-letter", indent=0):
         y = ((n // 5) * 4200*0.06 + yoffset)
         result.append(lock_holder(config=config, descr=descr, scale=0.06, x=x, y=y, indent=indent+1))
 
+    result.append(" "*4*indent + template_back.format(kind=kind,pagesize=pagesize))
     return "\n".join(result)
 
 
@@ -427,7 +428,7 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
     xoffset=107
     yoffset=209
 
-    for n in range(26):
+    for n in range(27):
         x = ((n %  7) * 2600*0.06 + xoffset)
         y = ((n // 7) * 4200*0.06 + yoffset)
         if (n < 11):
@@ -435,12 +436,50 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
         else:
             result.append(lock_holder_cut(kind="notch", scale=0.06, x=x, y=y, indent=indent+1))
 
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 850, y=960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 900, y=960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 950, y=960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1000, y=960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1050, y=960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1100, y=960, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1000, y= 960, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1050, y= 960, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1100, y= 960, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 150, y=1070, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 650, y=1070, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 400, y=1105, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 900, y=1105, rotate=90, indent=indent+1))
+
+    result.append(" "*4*indent + template_back.format(pagesize=pagesize))
+    return "\n".join(result)
+
+
+############################################################
+def paper_cut_sheet(pagesize="US-letter", indent=0):
+    template_front = '''<g id="paper_cut_sheet_{pagesize}")">\n'''
+    template_back = "</g>  <!-- id=\"paper_cut_sheet_{pagesize}\" -->\n"
+
+    result = []
+    for line in template_front.format(pagesize=pagesize).splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+
+    if pagesize=="US-letter":
+        # US letter page size
+        result.append(alignment_mark(kind="empty", x=  0, y=   0, scale=0.2, indent=indent+1))
+        result.append(alignment_mark(kind="empty", x=816, y=   0, scale=0.2, indent=indent+1))
+        result.append(alignment_mark(kind="empty", x=  0, y=1056, scale=0.2, indent=indent+1))
+        result.append(alignment_mark(kind="empty", x=816, y=1056, scale=0.2, indent=indent+1))
+        xoffset=0.5*2600*0.06 + (816-5*2600*0.06)/2  # Centering the grid of lock_holder horizontally on the page
+        yoffset=204  # Center the grid of lock_holder vertically on the page
+    else:
+        result.append(alignment_mark(kind="empty", x=     0, y=     0, scale=0.2, indent=indent+1))
+        result.append(alignment_mark(kind="empty", x=793.75, y=     0, scale=0.2, indent=indent+1))
+        result.append(alignment_mark(kind="empty", x=     0, y=1122.5, scale=0.2, indent=indent+1))
+        result.append(alignment_mark(kind="empty", x=793.75, y=1122.5, scale=0.2, indent=indent+1))
+        xoffset=0.5*2600*0.06 + (793.75-5*2600*0.06)/2  # Centering the grid of lock_holder horizontally on the page
+        yoffset=204  # Use US-letter offset for A4
+
+    for n in range(20):
+        x = ((n %  5) * 2600*0.06 + xoffset)
+        y = ((n // 5) * 4200*0.06 + yoffset)
+        result.append(lock_holder_cut(kind="plain",scale=0.06, x=x, y=y, indent=indent+1))
 
     result.append(" "*4*indent + template_back.format(pagesize=pagesize))
     return "\n".join(result)
