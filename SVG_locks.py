@@ -326,7 +326,7 @@ def lock_holder(config, descr="", alignment=True, x=0.0, y=0.0, scale=1.0, inden
 def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
     template_front_plain = '''
 <g id="lock_holder_cut_plain" transform="translate({x} {y}) scale({scale} {scale})">
-    <circle cx="0" cy="-100" r="1000" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-100" r="920" fill="none" stroke="black" stroke-width="5.0"/>
     <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
         M 1300,1000  A 200,200 90 0 1 1100,1200
@@ -337,7 +337,9 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0)
 '''
     template_front_notch = '''
 <g id="lock_holder_cut_notch" transform="translate({x} {y}) scale({scale} {scale})">
-    <circle cx="0" cy="-100" r="1000" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-100" r="917" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="-975" cy="-100" r="150" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="975" cy="-100" r="150" fill="none" stroke="black" stroke-width="5.0"/>
     <circle cx="0" cy="-2700" r="20" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
         M 1300,1000  A 200,200 90 0 1 1100,1200
