@@ -10,13 +10,13 @@ pagesize = "US-letter"
 #    SVG_file.write(SVG_locks.SVG_root(kind="front", pagesize=pagesize))
 #
 #    tests = []
-#    tests.append(("G0G1G2G3G4G5G6G7G8G9"    , "Example 1"))  # Example 1: All pins with bottoms lined up (no key inserted)
-#    tests.append(("G0G1G2G3G4G5G6G7G8G9 key", "Example 2"))  # Example 2: All pins with tops lined up (correct key inserted)
-#    tests.append(("P7P8P7P0P1 key"          , "Example 2"))  # Example 2: Five key pins 78701, with plain pins
-#    tests.append(("S9S0G1G2P5 key"          , "Example 4"))  # Example 4: Five key pins 90125, with assorted pins
-#    tests.append(("P1S4G2P8S5G7 key"        , "Example 5"))  # Example 5: Six key pins 142857, with assorted pins
-#    tests.append(("P1S4G2P8S5G7 key"        , "Example 5"))  # Example 5: Six key pins 142857, with assorted pins
-#    tests.append(("P1S4G2P8S5G7"            , "Example 5"))  # Example 5: Six key pins 142857, with assorted pins
+#    tests.append(("G0 G1 G2 G3 G4 G5 G6 G7 G8 G9"    , "Example 1"))  # Example 1: All pins with bottoms lined up (no key inserted)
+#    tests.append(("G0 G1 G2 G3 G4 G5 G6 G7 G8 G9 key", "Example 2"))  # Example 2: All pins with tops lined up (correct key inserted)
+#    tests.append(("P7 P8 P7 P0 P1 key"               , "Example 2"))  # Example 2: Five key pins 78701, with plain pins
+#    tests.append(("S9 S0 G1 G2 P5 key"               , "Example 4"))  # Example 4: Five key pins 90125, with assorted pins
+#    tests.append(("P1 S4 G2 P8 S5 G7 key"            , "Example 5"))  # Example 5: Six key pins 142857, with assorted pins
+#    tests.append(("P1 S4 G2 P8 S5 G7 key"            , "Example 5"))  # Example 5: Six key pins 142857, with assorted pins
+#    tests.append(("P1 S4 G2 P8 S5 G7"                , "Example 5"))  # Example 5: Six key pins 142857, with assorted pins
 #
 #    tests = []
 #    tests.append(("P7 P8 P7 P0 P1"        , "Test 1"))        # Example 1: Five key pins 78701, with plain pins, key inserted

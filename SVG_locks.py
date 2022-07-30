@@ -189,9 +189,13 @@ def pin(kind="plain", length=0, x=0.0, y=0.0, scale=0.0, indent=0):
     elif kind == "spool"   :  template = template_spool.format(x=x,y=y)
     elif kind == "serrated":  template = template_serrated.format(x=x,y=y)
     elif kind == "key"     :
-        y4 = 150 + 10*length
+        if length.isdigit():
+            pin_length = int(length)
+        else:
+            pin_length = 5
+        y4 = 150 + 10*pin_length
         y3, y2, y1, y0 = y4-5, y4-45, y4-50, y4-55
-        template = template_key.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,length=length,color0=length*16,color1=255-length*16)
+        template = template_key.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,length=length,color0=pin_length*16,color1=255-pin_length*16)
     result = []
     for line in template.splitlines():
         if line == '':
@@ -240,12 +244,12 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 
         if key_inserted:
             # Key inserted, tops of key pins line up with barrel
-            result.append(pin(kind="key", length=int(key), x=offset, y=0, indent=indent+1))
+            result.append(pin(kind="key", length=key, x=offset, y=0, indent=indent+1))
             result.append(pin(kind=kind, x=offset, y=0, indent=indent+1))
             result.append(spring(length=1, x=offset, y=-130, indent=indent+1))
         else:
             # Key not inserted, bottoms of key pins line up with each other
-            result.append(pin(kind="key", length=int(key), x=offset, y=110-10*int(key), indent=indent+1))
+            result.append(pin(kind="key", length=key, x=offset, y=110-10*int(key), indent=indent+1))
             result.append(pin(kind=kind, x=offset, y=110-10*int(key), indent=indent+1))
             result.append(spring(length=12-int(key), x=offset, y=-20-10*int(key), indent=indent+1))
     result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->\n".format(config=config))
@@ -257,14 +261,12 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
     template_front = '''
 <g id="key_{config}" transform="translate({x} {y}) scale({scale} {scale})">
     <line x1="{xl}" y1="500" x2="{xl}" y2="600" fill="none" stroke="black" stroke-width="2.0"/>
-    <line x1="{xl}" y1="500" x2="{xr}" y2="500" fill="none" stroke="black" stroke-width="2.0"/>
-    <line x1="{xr}" y1="500" x2="{xr}+150" y2="350" fill="none" stroke="black" stroke-width="2.0"/>
 '''
 
     slots = (len(config)+1)//3
     config_spec = [config[3*i+1] for i in range(slots)]
     for i in range(slots):
-        if config_spec[i] == '_':
+        if not config_spec[i].isnumeric():
             config_spec[i] = '5'
     result = []
 
