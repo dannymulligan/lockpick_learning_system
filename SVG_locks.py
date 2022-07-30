@@ -209,9 +209,8 @@ def pin(kind="plain", length=0, x=0.0, y=0.0, scale=0.0, indent=0):
 def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
     template_front = '''
 <g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
-    <path id="spring_cover" d="M {xl},-225 {xr},-225  {xr},-235 {xl},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
-    <path id="key_outline" d="M {x0},450 {x2},450 {x3},300 {x1},100 {x0},100 Z" fill="grey" stroke="black" stroke-width="2.0"/>
-    <line x1="{x0}" y1="0" x2="{x3}" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+    <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+    <line id="rotation_line" x1="{x0}" y1="0" x2="{x3}" y2="0" fill="none" stroke="green" stroke-width="8.0"/>
     <text x="0" y="600" text-anchor="middle" font-size="90">{config}</text>
 '''
     template_tail = "</g>\n"
@@ -223,14 +222,11 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 
     result = []
 
-    xl = -150*(slots/2.0) - 50
-    xr =  150*(slots/2.0) + 50
     x0 = -150*(slots/2.0) - 160
-    x2 = 150*(slots/2.0) + 105
-    x1 = x2 - 50
-    x3 = x2 + 150
-    x4 = x2 + 150
-    for line in template_front.format(x=x,y=y,xl=xl,xr=xr,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
+    x1 = -150*(slots/2.0) - 50
+    x2 =  150*(slots/2.0) + 50
+    x3 =  150*(slots/2.0) + 255
+    for line in template_front.format(x=x,y=y,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
         if line == '':
             result.append("\n")
         else:
@@ -260,24 +256,51 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
     template_front = '''
 <g id="key_{config}" transform="translate({x} {y}) scale({scale} {scale})">
-    <line x1="{xl}" y1="500" x2="{xl}" y2="600" fill="none" stroke="black" stroke-width="2.0"/>
 '''
-
-    slots = (len(config)+1)//3
-    config_spec = [config[3*i+1] for i in range(slots)]
-    for i in range(slots):
-        if not config_spec[i].isnumeric():
-            config_spec[i] = '5'
     result = []
 
-    for line in template_front.format(x=x,y=y,xl=-150*(slots/2.0)-185,xr=150*(slots/2.0)+130,scale=scale,config="".join(config_spec)).splitlines():
+    slots = (len(config)+1)//3
+    xl = -150*(slots/2.0) - 50
+    xr =  150*(slots/2.0) + 50
+    x0 = -150*(slots/2.0) - 160
+    x2 = 150*(slots/2.0) + 105
+    x1 = x2 - 50
+    x3 = x2 + 150
+    x4 = x2 + 150
+    for line in template_front.format(x=x,y=y,xl=xl,xr=xr,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
         if line == '':
             result.append("\n")
         else:
             result.append(" "*4*indent + line)
 
-    for (offset,pin) in [(150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
-        result.append(" "*4*indent + '    <line x1="{xl}" y1="{y}" x2="{xr}" y2="{y}" fill="none" stroke="black" stroke-width="2.0"/>'.format(xl=offset-50,xr=offset+50,y=250+10*pin,config="".join(config_spec)))
+    config_spec = [config[3*i+1] for i in range(slots)]
+    for i in range(slots):
+        if not config_spec[i].isnumeric():
+            config_spec[i] = '5'
+
+    points = []
+    points.append((-150*(slots/2.0) - 160, 200))  # left edge of top of key
+
+    for (n, offset,pin) in [(i, 150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
+        points.append((offset-50, 250+10*pin))    # left edge of pin landing
+        points.append((offset+50, 250+10*pin))    # right edge of pin landing
+
+    points.append((150*(slots/2.0) + 55, 200))    # end of top of key
+    points.append((150*(slots/2.0) + 255, 350))   # point of key
+    points.append((150*(slots/2.0) + 155, 550))   # right edge of bottom of key
+    points.append((-150*(slots/2.0) - 160, 550))  # left edge of bottom of key
+
+    points.append((-150*(slots/2.0) - 180, 750))  # stub of key handle
+    points.append((-150*(slots/2.0) - 360, 750))  # stub of key handle
+    points.append((-150*(slots/2.0) - 410, 375))  # stub of key handle
+    points.append((-150*(slots/2.0) - 360,   0))  # stub of key handle
+    points.append((-150*(slots/2.0) - 180,   0))  # stub of key handle
+
+    join_string = "\n" + " "*4*(indent+2)
+    key_path = join_string.join([str(x) + "," + str(y) for (x,y) in points])
+
+    result.append(" "*4*indent + "    <path id=\"key_outline_{config}\" d=\"M {key_path}".format(config=config,key_path=key_path))
+    result.append(" "*4*indent + "        Z\" fill=\"grey\" stroke=\"brown\" stroke-width=\"2.0\"/>")
 
     result.append(" "*4*indent + "</g>  <!-- id=\"key_{config}\" -->\n".format(config="".join(config_spec)))
     return "\n".join(result)
