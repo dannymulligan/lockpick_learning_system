@@ -285,10 +285,10 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
         points.append((offset-50, 250+10*pin))    # left edge of pin landing
         points.append((offset+50, 250+10*pin))    # right edge of pin landing
 
-    points.append((150*(slots/2.0) + 55, 200))    # end of top of key
-    points.append((150*(slots/2.0) + 255, 350))   # point of key
-    points.append((150*(slots/2.0) + 155, 550))   # right edge of bottom of key
-    points.append((-150*(slots/2.0) - 160, 550))  # left edge of bottom of key
+    points.append(( 150*(slots/2.0) +   0, 200))  # end of top of key
+    points.append(( 150*(slots/2.0) + 250, 450))  # tip of key
+    points.append(( 150*(slots/2.0) + 150, 550))  # right edge of bottom of key
+    points.append((-150*(slots/2.0) - 110, 550))  # left edge of bottom of key
 
     points.append((-150*(slots/2.0) - 180, 750))  # stub of key handle
     points.append((-150*(slots/2.0) - 360, 750))  # stub of key handle
