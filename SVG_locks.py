@@ -374,7 +374,7 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0)
 
 ############################################################
 def print_sheet(configs, kind="front", pagesize="US-letter", indent=0):
-    template_front = '''<g id="print_sheet_{kind}_{pagesize}"">\n'''
+    template_front = '''<g id="print_sheet_{kind}_{pagesize}">\n'''
     template_back = "</g>  <!-- id=\"print_sheet_{kind}_{pagesize}\" -->\n"
 
     result = []
@@ -414,7 +414,7 @@ def print_sheet(configs, kind="front", pagesize="US-letter", indent=0):
 
 ############################################################
 def plastic_cut_sheet(pagesize="12x12", indent=0):
-    template_front = '''<g id="plastic_cut_sheet_{pagesize}")">\n'''
+    template_front = '''<g id="plastic_cut_sheet_{pagesize}">\n'''
     template_back = "</g>  <!-- id=\"plastic_cut_sheet_{pagesize}\" -->\n"
 
     result = []
@@ -453,7 +453,7 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
 
 ############################################################
 def paper_cut_sheet(pagesize="US-letter", indent=0):
-    template_front = '''<g id="paper_cut_sheet_{pagesize}")">\n'''
+    template_front = '''<g id="paper_cut_sheet_{pagesize}">\n'''
     template_back = "</g>  <!-- id=\"paper_cut_sheet_{pagesize}\" -->\n"
 
     result = []
