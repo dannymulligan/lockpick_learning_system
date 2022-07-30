@@ -288,12 +288,12 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
     points.append(( 150*(slots/2.0) +   0, 200))  # end of top of key
     points.append(( 150*(slots/2.0) + 250, 450))  # tip of key
     points.append(( 150*(slots/2.0) + 150, 550))  # right edge of bottom of key
-    points.append((-150*(slots/2.0) - 110, 550))  # left edge of bottom of key
+    points.append((-150*(slots/2.0) - 160, 550))  # left edge of bottom of key
 
-    points.append((-150*(slots/2.0) - 180, 750))  # stub of key handle
-    points.append((-150*(slots/2.0) - 360, 750))  # stub of key handle
-    points.append((-150*(slots/2.0) - 410, 375))  # stub of key handle
-    points.append((-150*(slots/2.0) - 360,   0))  # stub of key handle
+    points.append((-150*(slots/2.0) - 180, 725))  # stub of key handle
+    points.append((-150*(slots/2.0) - 380, 725))  # stub of key handle
+    points.append((-150*(slots/2.0) - 430, 350))  # stub of key handle
+    points.append((-150*(slots/2.0) - 380,   0))  # stub of key handle
     points.append((-150*(slots/2.0) - 180,   0))  # stub of key handle
 
     join_string = "\n" + " "*4*(indent+2)
