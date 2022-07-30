@@ -256,52 +256,67 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
     template_front = '''
 <g id="key_{config}" transform="translate({x} {y}) scale({scale} {scale})">
+    <line id="key_shelf_left"  x1="{xl}" y1="000" x2="{xl}" y2="600" fill="none" stroke="red" stroke-width="5.0"/>
+    <line id="key_shelf_right" x1="{xr}" y1="000" x2="{xr}" y2="600" fill="none" stroke="red" stroke-width="5.0"/>
+    <path id="key_outline_handle" d="m {xl},200  0,-50  -50,0  0,-50  -100,-100  -300,0  -100,100  0,500  100,100  300,0  100,-100  0,-50  50,0
+        Z" fill="green" stroke="none"/>
+    <path id="key_outline_right" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300
+        Z" fill="orange" stroke="none"/>
 '''
     result = []
 
     slots = (len(config)+1)//3
-    xl = -150*(slots/2.0) - 50
-    xr =  150*(slots/2.0) + 50
-    x0 = -150*(slots/2.0) - 160
-    x2 = 150*(slots/2.0) + 105
-    x1 = x2 - 50
-    x3 = x2 + 150
-    x4 = x2 + 150
-    for line in template_front.format(x=x,y=y,xl=xl,xr=xr,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
-        if line == '':
-            result.append("\n")
-        else:
-            result.append(" "*4*indent + line)
+    xl = -150*(slots/2.0)  # Center of left most pin
+    xr =  150*(slots/2.0)  # Center of right most pin
 
     config_spec = [config[3*i+1] for i in range(slots)]
     for i in range(slots):
         if not config_spec[i].isnumeric():
             config_spec[i] = '5'
 
-    points = []
-    points.append((-150*(slots/2.0) - 160, 200))  # left edge of top of key
+    for line in template_front.format(xl=xl-100,xr=xr+100,x=x,y=y,scale=scale,config="".join(config_spec)).splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
 
+    template_key = '''
+    <path id="key_outline_handle" d="m {xl},200  0,-50  -50,0  0,-50  -100,-100  -300,0  -100,100  0,500  100,100  300,0  100,-100  0,-50  50,0
+        Z" fill="orange" stroke="none"/>
+    <path id="key_outline_right" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300 Z" fill="orange" stroke="none"/>
+'''
+    for line in template_key.format(xl=xl-100,xr=xr+100).splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+
+    template_mask = '''<path id="clip_path_{n}" d="m {x},{y}  25,0  250,-250  0,-500  500,0  0,2000  -1550,0  0,-2000  500,0  0,500  250,250  25,0 Z" fill="none" stroke="red" stroke-width="2.0"/>'''
     for (n, offset,pin) in [(i, 150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
-        points.append((offset-50, 250+10*pin))    # left edge of pin landing
-        points.append((offset+50, 250+10*pin))    # right edge of pin landing
+        result.append(" "*4*(indent+1) + template_mask.format(n=n,x=offset,y=250+pin*10))
 
-    points.append(( 150*(slots/2.0) +   0, 200))  # end of top of key
-    points.append(( 150*(slots/2.0) + 250, 450))  # tip of key
-    points.append(( 150*(slots/2.0) + 150, 550))  # right edge of bottom of key
-    points.append((-150*(slots/2.0) - 160, 550))  # left edge of bottom of key
 
-    points.append((-150*(slots/2.0) - 180, 725))  # stub of key handle
-    points.append((-150*(slots/2.0) - 350, 725))  # stub of key handle
-    points.append((-150*(slots/2.0) - 400, 400))  # stub of key handle
-    points.append((-150*(slots/2.0) - 400, 300))  # stub of key handle
-    points.append((-150*(slots/2.0) - 350, -25))  # stub of key handle
-    points.append((-150*(slots/2.0) - 180, -25))  # stub of key handle
-
-    join_string = "\n" + " "*4*(indent+2)
-    key_path = join_string.join([str(x) + "," + str(y) for (x,y) in points])
-
-    result.append(" "*4*indent + "    <path id=\"key_outline_{config}\" d=\"M {key_path}".format(config=config,key_path=key_path))
-    result.append(" "*4*indent + "        Z\" fill=\"grey\" stroke=\"brown\" stroke-width=\"2.0\"/>")
+#    points = []
+#    points.append((-150*(slots/2.0) - 160, 200))  # left edge of top of key
+#
+#
+#    points.append(( 150*(slots/2.0) +   0, 200))  # end of top of key
+#    points.append(( 150*(slots/2.0) + 250, 450))  # tip of key
+#    points.append(( 150*(slots/2.0) + 150, 550))  # right edge of bottom of key
+#    points.append((-150*(slots/2.0) - 160, 550))  # left edge of bottom of key
+#
+#    points.append((-150*(slots/2.0) - 180, 725))  # stub of key handle
+#    points.append((-150*(slots/2.0) - 350, 725))  # stub of key handle
+#    points.append((-150*(slots/2.0) - 400, 400))  # stub of key handle
+#    points.append((-150*(slots/2.0) - 400, 300))  # stub of key handle
+#    points.append((-150*(slots/2.0) - 350, -25))  # stub of key handle
+#    points.append((-150*(slots/2.0) - 180, -25))  # stub of key handle
+#
+#    join_string = "\n" + " "*4*(indent+2)
+#    key_path = join_string.join([str(x) + "," + str(y) for (x,y) in points])
+#
+#    result.append(" "*4*indent + "    <path id=\"key_outline_{config}\" d=\"M {key_path}".format(config=config,key_path=key_path))
+#    result.append(" "*4*indent + "        Z\" fill=\"grey\" stroke=\"brown\" stroke-width=\"2.0\"/>")
 
     result.append(" "*4*indent + "</g>  <!-- id=\"key_{config}\" -->\n".format(config="".join(config_spec)))
     return "\n".join(result)
@@ -312,7 +327,7 @@ def lock_holder(config, descr="", alignment=True, x=0.0, y=0.0, scale=1.0, inden
     template_front = '''
 <g id="lock_holder" transform="translate({x} {y}) scale({scale} {scale})">
     <circle cx="0" cy="-100" r="920" fill="none" stroke="black" stroke-width="5.0"/>
-    <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-2700" r="200" fill="none" stroke="black" stroke-width="5.0"/>
     <text x="0" y="1100" text-anchor="middle" font-size="200">{descr}</text>
     <path d="
         M 1300,1000  A 200,200 90 0 1 1100,1200
@@ -339,10 +354,10 @@ def lock_holder(config, descr="", alignment=True, x=0.0, y=0.0, scale=1.0, inden
         result.append(alignment_mark(kind="NW", x=-1300, y=-3000, indent=indent+1))
 
     if config is not None:
-        result.append(lock(config=config, x=0, y=-2100, scale=1.6, indent=indent+1))
         key_inserted = (config[-4:] == " key")
         if key_inserted:
             result.append(key(config=config[:-4], x=0, y=-2260, scale=1.6, indent=indent+1))
+        result.append(lock(config=config, x=0, y=-2100, scale=1.6, indent=indent+1))
 
     result.append(" "*4*indent + template_back)
     return "\n".join(result)
@@ -353,7 +368,7 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0)
     template_front_plain = '''
 <g id="lock_holder_cut_plain" transform="translate({x} {y}) scale({scale} {scale})">
     <circle cx="0" cy="-100" r="920" fill="none" stroke="black" stroke-width="5.0"/>
-    <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-2700" r="200" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
         M 1300,1000  A 200,200 90 0 1 1100,1200
         L -1100,1200  A 200,200 90 0 1 -1300,1000
@@ -367,7 +382,7 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0)
                          A 150,150 0 0 0  907,  32
                          A 915,915 0 0 1 -907,  32
                          A 150,150 0 0 0 -907,-232 Z" fill="none" stroke="black" stroke-width="5.0"/>
-    <circle cx="0" cy="-2700" r="80" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-2700" r="200" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
         M 1300,1000  A 200,200 90 0 1 1100,1200
         L -1100,1200  A 200,200 90 0 1 -1300,1000
@@ -377,9 +392,12 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0)
 '''
     template_front_lever = '''
 <g id="lock_holder_cut_lever" transform="translate({x} {y}) scale({scale} {scale}) rotate({rotate})">
-    <ellipse cx="0" cy="-400" rx="400" ry="2400" fill="none" stroke="black" stroke-width="5.0"/>
-    <circle cx="80" cy="1500" r="25" fill="none" stroke="black" stroke-width="5.0"/>
-    <circle cx="-80" cy="1500" r="25" fill="none" stroke="black" stroke-width="5.0"/>
+    <ellipse cx="0" cy="-200" rx="700" ry="2200" fill="none" stroke="black" stroke-width="5.0"/>
+    <g transform="rotate(30 0 1210)">
+        <rect x="-128" y="810" width="256" height="800" fill="none" stroke="black" stroke-width="5.0"/>
+        <circle cx="264" cy="1200" r="80" fill="none" stroke="black" stroke-width="5.0"/>
+        <circle cx="-264" cy="1200" r="80" fill="none" stroke="black" stroke-width="5.0"/>
+    </g>
 '''
     template_back = "</g>  <!-- id=\"lock_holder_template_{kind}\" -->\n"
 
@@ -454,8 +472,8 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
     result.append(alignment_mark(kind="empty", x=1152, y=   0, scale=0.2, indent=indent+1))
     result.append(alignment_mark(kind="empty", x=   0, y=1152, scale=0.2, indent=indent+1))
     result.append(alignment_mark(kind="empty", x=1152, y=1152, scale=0.2, indent=indent+1))
-    xoffset=107
-    yoffset=209
+    xoffset=97
+    yoffset=199
 
     for n in range(27):
         x = ((n %  7) * 2600*0.06 + xoffset)
@@ -465,13 +483,12 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
         else:
             result.append(lock_holder_cut(kind="notch", scale=0.06, x=x, y=y, indent=indent+1))
 
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1000, y= 960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1050, y= 960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1100, y= 960, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 150, y=1070, rotate=90, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 650, y=1070, rotate=90, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 400, y=1105, rotate=90, indent=indent+1))
-    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 900, y=1105, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1005, y= 920, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x=1090, y= 990, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 140, y=1070, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 400, y=1090, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 660, y=1070, rotate=90, indent=indent+1))
+    result.append(lock_holder_cut(kind="lever", scale=0.06, x= 920, y=1090, rotate=90, indent=indent+1))
 
     result.append(" "*4*indent + template_back.format(pagesize=pagesize))
     return "\n".join(result)
