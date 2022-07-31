@@ -38,6 +38,78 @@ def SVG_root(kind="front", pagesize="US-letter"):
 
 
 ############################################################
+def ruler_guide(x=0.0, y=0.0, scale=1.0, indent=0):
+    # When scale=1.0, a US-letter page is 1056.0 units high, which is 11 inches
+    #   therefore 1.0 inches = 96.0 units
+    # With scale=1.0, an A4 page is 1122.5 units high, which is 297 mm
+    #   therefore 1.0 mm = 3.779 units
+    # 6 inches = 576 units
+    # 150 mm = 566.919 units
+    template_ruler = '''
+<g id="ruler_guide" transform="translate({x} {y}) scale({scale} {scale})">
+    <line id="ruler_line" x1="0" y1="0" x2="576" y2="0" fill="none" stroke="black" stroke-width="1"/>
+    <path id="ruler_ticks_inch" d="
+        M   0,0 l 0,10
+        M  96,0 l 0,10
+        M 192,0 l 0,10
+        M 288,0 l 0,10
+        M 384,0 l 0,10
+        M 480,0 l 0,10
+        M 576,0 l 0,10
+        " fill="none" stroke="black" stroke-width="1"/>
+    <text x="  5" y="12" text-anchor="left" font-size="10">0</text>
+    <text x="101" y="12" text-anchor="left" font-size="10">1</text>
+    <text x="197" y="12" text-anchor="left" font-size="10">2</text>
+    <text x="293" y="12" text-anchor="left" font-size="10">3</text>
+    <text x="389" y="12" text-anchor="left" font-size="10">4</text>
+    <text x="485" y="12" text-anchor="left" font-size="10">5</text>
+    <text x="581" y="12" text-anchor="left" font-size="10">6 in</text>
+    <path id="ruler_ticks_mm" d="
+        M   0.0,0 l 0,-10
+        M  37.8,0 l 0,-10
+        M  75.6,0 l 0,-10
+        M 113.4,0 l 0,-10
+        M 151.2,0 l 0,-10
+        M 189.0,0 l 0,-10
+        M 226.8,0 l 0,-10
+        M 264.6,0 l 0,-10
+        M 302.4,0 l 0,-10
+        M 340.2,0 l 0,-10
+        M 377.9,0 l 0,-10
+        M 415.7,0 l 0,-10
+        M 453.5,0 l 0,-10
+        M 491.3,0 l 0,-10
+        M 529.1,0 l 0,-10
+        M 566.9,0 l 0,-10
+        " fill="none" stroke="black" stroke-width="1"/>
+    <text x="  5.0" y="-6" text-anchor="left" font-size="8">0</text>
+    <text x=" 42.8" y="-6" text-anchor="left" font-size="8">10</text>
+    <text x=" 80.6" y="-6" text-anchor="left" font-size="8">20</text>
+    <text x="118.4" y="-6" text-anchor="left" font-size="8">30</text>
+    <text x="156.2" y="-6" text-anchor="left" font-size="8">40</text>
+    <text x="194.0" y="-6" text-anchor="left" font-size="8">50</text>
+    <text x="231.8" y="-6" text-anchor="left" font-size="8">60</text>
+    <text x="269.6" y="-6" text-anchor="left" font-size="8">70</text>
+    <text x="307.4" y="-6" text-anchor="left" font-size="8">80</text>
+    <text x="345.2" y="-6" text-anchor="left" font-size="8">90</text>
+    <text x="382.9" y="-6" text-anchor="left" font-size="8">100</text>
+    <text x="420.7" y="-6" text-anchor="left" font-size="8">110</text>
+    <text x="458.5" y="-6" text-anchor="left" font-size="8">120</text>
+    <text x="496.3" y="-6" text-anchor="left" font-size="8">130</text>
+    <text x="534.1" y="-6" text-anchor="left" font-size="8">140</text>
+    <text x="571.9" y="-6" text-anchor="left" font-size="8">150mm</text>
+</g>
+'''
+    result = []
+    for line in template_ruler.format(x=x,y=y,scale=scale).splitlines():
+        if line == '':
+            result.append("\n")
+        else:
+            result.append(" "*4*indent + line)
+    return "\n".join(result)
+
+
+############################################################
 def alignment_mark(kind="empty", x=0.0, y=0.0, scale=1.0, indent=0):
     template_empty = '''
 <g id="alignment_empty" transform="translate({x} {y}) scale({scale} {scale})">
@@ -392,9 +464,9 @@ def lock_holder_cut(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0)
 
 
 ############################################################
-def print_sheet(configs, kind="front", pagesize="US-letter", indent=0):
-    template_front = '''<g id="print_sheet_{kind}_{pagesize}">\n'''
-    template_back = "</g>  <!-- id=\"print_sheet_{kind}_{pagesize}\" -->\n"
+def paper_sheet(configs, kind="front", pagesize="US-letter", indent=0):
+    template_front = '''<g id="paper_{kind}_sheet_{pagesize}">\n'''
+    template_back = "</g>  <!-- id=\"paper_{kind}_sheet_{pagesize}\" -->\n"
 
     result = []
     for line in template_front.format(kind=kind,pagesize=pagesize).splitlines():
@@ -404,28 +476,41 @@ def print_sheet(configs, kind="front", pagesize="US-letter", indent=0):
             result.append(" "*4*indent + line)
 
     if pagesize=="US-letter":
-        # US letter page size
-        result.append(alignment_mark(kind="empty", x=  0, y=   0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=816, y=   0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=  0, y=1056, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=816, y=1056, scale=0.2, indent=indent+1))
+        ## US letter page size
+        #result.append(alignment_mark(kind="empty", x=  0, y=   0, scale=0.2, indent=indent+1))
+        #result.append(alignment_mark(kind="empty", x=816, y=   0, scale=0.2, indent=indent+1))
+        #result.append(alignment_mark(kind="empty", x=  0, y=1056, scale=0.2, indent=indent+1))
+        #result.append(alignment_mark(kind="empty", x=816, y=1056, scale=0.2, indent=indent+1))
+        result.append(ruler_guide(x=100, y=1035, scale=1.0, indent=indent+1))
         xoffset=0.5*2600*0.06 + (816-5*2600*0.06)/2  # Centering the grid of lock_holder horizontally on the page
-        yoffset=204  # Center the grid of lock_holder vertically on the page
+        yoffset=192
     else:
-        result.append(alignment_mark(kind="empty", x=     0, y=     0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=793.75, y=     0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=     0, y=1122.5, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=793.75, y=1122.5, scale=0.2, indent=indent+1))
+        ## A4 page size
+        #result.append(alignment_mark(kind="empty", x=     0, y=     0, scale=0.2, indent=indent+1))
+        #result.append(alignment_mark(kind="empty", x=793.75, y=     0, scale=0.2, indent=indent+1))
+        #result.append(alignment_mark(kind="empty", x=     0, y=1122.5, scale=0.2, indent=indent+1))
+        #result.append(alignment_mark(kind="empty", x=793.75, y=1122.5, scale=0.2, indent=indent+1))
+        result.append(ruler_guide(x=100, y=1080, scale=1.0, indent=indent+1))
         xoffset=0.5*2600*0.06 + (793.75-5*2600*0.06)/2  # Centering the grid of lock_holder horizontally on the page
         yoffset=204  # Use US-letter offset for A4
 
-    for (n, (config, descr)) in enumerate(configs):
-        if (kind == "front"):
+    if   (kind == "front"):
+        for (n, (config, descr)) in enumerate(configs):
             x = ((n %  5) * 2600*0.06 + xoffset)
-        else:  # (kind == "back"):
+            y = ((n // 5) * 4200*0.06 + yoffset)
+            result.append(lock_holder(config=config, descr=descr, alignment=False, scale=0.06, x=x, y=y, indent=indent+1))
+
+    elif (kind == "back"):
+        for (n, (config, descr)) in enumerate(configs):
             x = ((4 - n %  5) * 2600*0.06 + xoffset)
-        y = ((n // 5) * 4200*0.06 + yoffset)
-        result.append(lock_holder(config=config, descr=descr, scale=0.06, x=x, y=y, indent=indent+1))
+            y = ((n // 5) * 4200*0.06 + yoffset)
+            result.append(lock_holder(config=config, descr=descr, alignment=False, scale=0.06, x=x, y=y, indent=indent+1))
+
+    else:  # kind == "cut"
+        for n in range(20):
+            x = ((n %  5) * 2600*0.06 + xoffset)
+            y = ((n // 5) * 4200*0.06 + yoffset)
+            result.append(lock_holder_cut(kind="plain",scale=0.06, x=x, y=y, indent=indent+1))
 
     result.append(" "*4*indent + template_back.format(kind=kind,pagesize=pagesize))
     return "\n".join(result)
@@ -464,43 +549,6 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
     result.append(lock_holder_cut(kind="lever", scale=0.06, x= 398, y=1090, rotate=90, indent=indent+1))
     result.append(lock_holder_cut(kind="lever", scale=0.06, x= 656, y=1070, rotate=90, indent=indent+1))
     result.append(lock_holder_cut(kind="lever", scale=0.06, x= 914, y=1090, rotate=90, indent=indent+1))
-
-    result.append(" "*4*indent + template_back.format(pagesize=pagesize))
-    return "\n".join(result)
-
-
-############################################################
-def paper_cut_sheet(pagesize="US-letter", indent=0):
-    template_front = '''<g id="paper_cut_sheet_{pagesize}">\n'''
-    template_back = "</g>  <!-- id=\"paper_cut_sheet_{pagesize}\" -->\n"
-
-    result = []
-    for line in template_front.format(pagesize=pagesize).splitlines():
-        if line == '':
-            result.append("\n")
-        else:
-            result.append(" "*4*indent + line)
-
-    if pagesize=="US-letter":
-        # US letter page size
-        result.append(alignment_mark(kind="empty", x=  0, y=   0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=816, y=   0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=  0, y=1056, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=816, y=1056, scale=0.2, indent=indent+1))
-        xoffset=0.5*2600*0.06 + (816-5*2600*0.06)/2  # Centering the grid of lock_holder horizontally on the page
-        yoffset=204  # Center the grid of lock_holder vertically on the page
-    else:
-        result.append(alignment_mark(kind="empty", x=     0, y=     0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=793.75, y=     0, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=     0, y=1122.5, scale=0.2, indent=indent+1))
-        result.append(alignment_mark(kind="empty", x=793.75, y=1122.5, scale=0.2, indent=indent+1))
-        xoffset=0.5*2600*0.06 + (793.75-5*2600*0.06)/2  # Centering the grid of lock_holder horizontally on the page
-        yoffset=204  # Use US-letter offset for A4
-
-    for n in range(20):
-        x = ((n %  5) * 2600*0.06 + xoffset)
-        y = ((n // 5) * 4200*0.06 + yoffset)
-        result.append(lock_holder_cut(kind="plain",scale=0.06, x=x, y=y, indent=indent+1))
 
     result.append(" "*4*indent + template_back.format(pagesize=pagesize))
     return "\n".join(result)
