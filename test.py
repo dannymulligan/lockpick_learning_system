@@ -112,25 +112,25 @@ without_keys.append(("S8 P4 P2"         , "Level 19"))
 without_keys.append(("P0 S4 P2 G9 S0 P9", "Testcase"))
 
 pagesize = "US-letter"
-pagesize = "A4"
+#pagesize = "A4"
 #pagesize = "12x12"
 
 with open("front.svg", "w") as SVG_file:
-    SVG_file.write(SVG_locks.SVG_root(kind="front", pagesize=pagesize))
+    SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
     SVG_file.write(SVG_locks.paper_sheet(with_keys, kind="front", pagesize=pagesize, indent=1))
-    SVG_file.write(SVG_locks.SVG_root(kind="tail"))
+    SVG_file.write(SVG_locks.SVG_root(kind="end"))
 
 with open("back.svg", "w") as SVG_file:
-    SVG_file.write(SVG_locks.SVG_root(kind="front", pagesize=pagesize))
+    SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
     SVG_file.write(SVG_locks.paper_sheet(without_keys, kind="back", pagesize=pagesize, indent=1))
-    SVG_file.write(SVG_locks.SVG_root(kind="tail"))
+    SVG_file.write(SVG_locks.SVG_root(kind="end"))
 
 with open("paper_cut_sheet.svg", "w") as SVG_file:
-    SVG_file.write(SVG_locks.SVG_root(kind="front", pagesize=pagesize))
+    SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
     SVG_file.write(SVG_locks.paper_sheet([], kind="cut", pagesize=pagesize, indent=1))
-    SVG_file.write(SVG_locks.SVG_root(kind="tail"))
+    SVG_file.write(SVG_locks.SVG_root(kind="end"))
 
 with open("plastic_cut_sheet.svg", "w") as SVG_file:
-    SVG_file.write(SVG_locks.SVG_root(kind="front", pagesize="12x12"))
+    SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize="12x12"))
     SVG_file.write(SVG_locks.plastic_cut_sheet(pagesize="12x12", indent=1))
-    SVG_file.write(SVG_locks.SVG_root(kind="tail"))
+    SVG_file.write(SVG_locks.SVG_root(kind="end"))
