@@ -524,7 +524,7 @@ def paper_sheet(configs, kind="front", pagesize="US-letter", indent=0):
         for (n, (config, descr)) in enumerate(configs):
             x = ((2 - n % 3) * 3300*0.06 + xoffset)
             y = ((n // 3) * 4600*0.06 + yoffset)
-            result.append(lock_holder(config=config, descr=descr, alignment=True, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
+            result.append(lock_holder(config=config, descr=descr, alignment=True, outline=False, scale=0.06, x=x, y=y, indent=indent+1))
 
     else:  # kind == "cut"
         for n in range(9):
