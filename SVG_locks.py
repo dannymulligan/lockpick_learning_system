@@ -280,7 +280,7 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 <g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
     <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
     <line id="rotation_line" x1="{x0}" y1="0" x2="{x3}" y2="0" fill="none" stroke="green" stroke-width="8.0"/>
-    <text x="0" y="600" text-anchor="middle" font-size="100">{config}</text>
+    <text x="0" y="550" text-anchor="middle" font-size="80">{config}</text>
 '''
     template_tail = "</g>\n"
     key_inserted = (config[-4:] == " key")
@@ -291,10 +291,10 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 
     result = []
 
-    x0 = -150*(slots/2.0) - 160
+    x0 = -150*(slots/2.0) - 150
     x1 = -150*(slots/2.0) - 50
     x2 =  150*(slots/2.0) + 50
-    x3 =  150*(slots/2.0) + 255
+    x3 =  150*(slots/2.0) + 150
     for line in template_start.format(x=x,y=y,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
         if line == '':
             result.append("\n")
@@ -343,13 +343,14 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
             result.append(" "*4*indent + line)
 
     result.append(" "*4*(indent+1) + '''<mask id="key_mask_{config}">'''.format(config="".join(config_spec)))
-    result.append(" "*4*(indent+2) + '''<path d="M -950,-250 660,-250 660,750 -950,750 Z" fill="white" stroke="none"/>''')
+    result.append(" "*4*(indent+2) + '''<path d="M -1000,-400 600,-400 600,700 -1000,700 Z" fill="white" stroke="none"/>''')
     template_mask = '''<path id="clip_path_{n}" d="M {x},{y} l 25,0  150,-150  0,-100  -350,0  0,100  150,150  25,0 Z" fill="black" stroke="none"/>'''
     for (n, offset,pin) in [(i, 150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
         result.append(" "*4*(indent+2) + template_mask.format(n=n,x=offset,y=250+pin*10))
     result.append(" "*4*(indent+1) + "</mask>")
 
     template_key = '''
+    <path d="M -1000,-400 600,-400 600,700 -1000,700 Z" fill="none" stroke="red"/>
     <path id="key_outline_handle" d="m {xl},200  0,-50  -50,0  0,-50  -100,-100  -250,0  -100,100  0,500  100,100  250,0  100,-100  0,-50  50,0
         Z m -300,150 0,50 -100,0 0,-100 100,0 0,50 Z" fill="#ef9500" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>
     <path id="key_outline_rail" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300 Z" fill="#ffa500" stroke="black" mask="url(#key_mask_{config})"/>
@@ -370,7 +371,7 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
 def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
     template_start = '''
 <g id="lock_holder_outline_{kind}" transform="translate({x} {y}) scale({scale} {scale})">
-    <circle cx="0" cy="-2700" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle cx="0" cy="-2800" r="200" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
         M  1650, 1000  a 400,400 90 0 1  -400,  400
         l -2500,    0  a 400,400 90 0 1  -400, -400
@@ -451,7 +452,7 @@ def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
 def lock_holder(config, descr="", alignment=True, outline=True, x=0.0, y=0.0, scale=1.0, indent=0):
     template_start = '''
 <g id="lock_holder" transform="translate({x} {y}) scale({scale} {scale})">
-    <text x="0" y="1100" text-anchor="middle" font-size="200">{descr}</text>
+    <text x="0" y="1200" text-anchor="middle" font-size="240">{descr}</text>
 '''
     template_end = "</g>  <!-- id=\"lock_holder\" -->\n"
 
@@ -474,10 +475,10 @@ def lock_holder(config, descr="", alignment=True, outline=True, x=0.0, y=0.0, sc
     if config is not None:
         key_inserted = (config[-4:] == " key")
         if key_inserted:
-            result.append(key(config=config[:-4], x=225, y=-2260, scale=1.6, indent=indent+1))
-            result.append(lock(config=config, x=225, y=-2100, scale=1.6, indent=indent+1))
+            result.append(key(config=config[:-4], x=400, y=-2360, scale=2.0, indent=indent+1))
+            result.append(lock(config=config, x=400, y=-2200, scale=2.0, indent=indent+1))
         else:
-            result.append(lock(config=config, x=0, y=-2100, scale=1.6, indent=indent+1))
+            result.append(lock(config=config, x=0, y=-2100, scale=2.0, indent=indent+1))
 
     result.append(" "*4*indent + template_end)
     return "\n".join(result)

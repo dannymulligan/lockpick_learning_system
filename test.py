@@ -73,9 +73,9 @@ with_keys.append(("P0 P9 key"            , "Level 2" ))
 with_keys.append(("P9 P4 key"            , "Level 3" ))
 with_keys.append(("P9 P0 P9 key"         , "Level 4" ))
 with_keys.append(("P3 P4 P7 P2 key"      , "Level 4" ))
+with_keys.append(("P9 P5 P8 P3 P0 key"   , "Testcase" ))
 with_keys.append(("P3 P7 key"            , "Level 5" ))
 with_keys.append(("P0 P9 P0 key"         , "Level 6" ))
-with_keys.append(("P9 P5 P8 P3 key"      , "Level 7" ))
 with_keys.append(("p0 __ p2 g9 s0 p9 key", "Testcase"))
 
 without_keys = []
@@ -84,9 +84,9 @@ without_keys.append(("P0 P9"            , "Level 2" ))
 without_keys.append(("P9 P4"            , "Level 3" ))
 without_keys.append(("P9 P0 P9"         , "Level 4" ))
 without_keys.append(("P3 P4 P7 P2"      , "Level 4" ))
+without_keys.append(("P9 P5 P8 P3 P0"   , "Testcase" ))
 without_keys.append(("P3 P7"            , "Level 5" ))
 without_keys.append(("P0 P9 P0"         , "Level 6" ))
-without_keys.append(("P9 P5 P8 P3"      , "Level 7" ))
 without_keys.append(("P0 S4 P2 G9 S0 P9", "Testcase"))
 
 pagesize = "US-letter"
