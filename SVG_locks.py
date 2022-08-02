@@ -280,7 +280,7 @@ def lock(config, x=0.0, y=0.0, scale=1.0, indent=0):
 <g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
     <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
     <line id="rotation_line" x1="{x0}" y1="0" x2="{x3}" y2="0" fill="none" stroke="green" stroke-width="8.0"/>
-    <text x="0" y="550" text-anchor="middle" font-size="80">{config}</text>
+    <text x="0" y="500" text-anchor="middle" font-size="80">{config}</text>
 '''
     template_tail = "</g>\n"
     key_inserted = (config[-4:] == " key")
@@ -525,7 +525,7 @@ def paper_sheet(configs, kind="front", pagesize="US-letter", indent=0):
         for (n, (config, descr)) in enumerate(configs):
             x = ((2 - n % 3) * 3300*0.06 + xoffset)
             y = ((n // 3) * 4600*0.06 + yoffset)
-            result.append(lock_holder(config=config, descr=descr, alignment=True, outline=False, scale=0.06, x=x, y=y, indent=indent+1))
+            result.append(lock_holder(config=config, descr=descr, alignment=True, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
 
     else:  # kind == "cut"
         for n in range(9):
