@@ -548,10 +548,10 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
         else:
             result.append(" "*4*indent + line)
 
-    result.append(alignment_mark(kind="empty", x=   0, y=   0, scale=0.2, indent=indent+1))
-    result.append(alignment_mark(kind="empty", x=1152, y=   0, scale=0.2, indent=indent+1))
-    result.append(alignment_mark(kind="empty", x=   0, y=1152, scale=0.2, indent=indent+1))
-    result.append(alignment_mark(kind="empty", x=1152, y=1152, scale=0.2, indent=indent+1))
+    #result.append(alignment_mark(kind="empty", x=   0, y=   0, scale=0.2, indent=indent+1))
+    #result.append(alignment_mark(kind="empty", x=1152, y=   0, scale=0.2, indent=indent+1))
+    #result.append(alignment_mark(kind="empty", x=   0, y=1152, scale=0.2, indent=indent+1))
+    #result.append(alignment_mark(kind="empty", x=1152, y=1152, scale=0.2, indent=indent+1))
     xoffset=118
     yoffset=218
 
