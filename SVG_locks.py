@@ -343,21 +343,24 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
             result.append(" "*4*indent + line)
 
     result.append(" "*4*(indent+1) + '''<mask id="key_mask_{config}">'''.format(config="".join(config_spec)))
-    result.append(" "*4*(indent+2) + '''<path d="M -1000,-400 600,-400 600,700 -1000,700 Z" fill="white" stroke="none"/>''')
+    result.append(" "*4*(indent+2) + '''<path d="M -1000,-400 600,-400 600,750 -1000,750 Z" fill="white" stroke="none"/>''')
     template_mask = '''<path id="clip_path_{n}" d="M {x},{y} l 25,0  150,-150  0,-100  -350,0  0,100  150,150  25,0 Z" fill="black" stroke="none"/>'''
     for (n, offset,pin) in [(i, 150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
         result.append(" "*4*(indent+2) + template_mask.format(n=n,x=offset,y=250+pin*10))
     result.append(" "*4*(indent+1) + "</mask>")
 
     template_key = '''
-    <path d="M -1000,-400 600,-400 600,700 -1000,700 Z" fill="none" stroke="red"/>
-    <path id="key_outline_handle" d="m {xl},200  0,-50  -50,0  0,-50  -100,-100  -250,0  -100,100  0,500  100,100  250,0  100,-100  0,-50  50,0
-        Z m -300,150 0,50 -100,0 0,-100 100,0 0,50 Z" fill="#ef9500" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>
+    <path d="M -1000,-400 600,-400 600,750 -1000,750 Z" fill="none" stroke="green"/>
     <path id="key_outline_rail" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300 Z" fill="#ffa500" stroke="black" mask="url(#key_mask_{config})"/>
     <path id="key_outline_groove0" d="M {xl},350  {xr},350 l 150,0 -50,-50 L {xr},300 {xl},300 Z" fill="#ffa580" stroke="none" mask="url(#key_mask_{config})"/>
     <path id="key_outline_groove1" d="M {xl},475  {xr},475 l 125,0 50,-50 L {xr},425 {xl},425 Z" fill="#af5500" stroke="none" mask="url(#key_mask_{config})"/>
+    <path id="key_outline_handle" d="
+        m {xl},200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#ef9500" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>
+    <circle id="key_outline_handle_hole" cx="{xl0}" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>
 '''
-    for line in template_key.format(xl=xl-150,xr=xr+50,config="".join(config_spec)).splitlines():
+    for line in template_key.format(xl0=xl-500,xl=xl-150,xr=xr+50,config="".join(config_spec)).splitlines():
         if line == '':
             result.append("\n")
         else:
@@ -368,19 +371,21 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
 
 
 ############################################################
-def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
+def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, color="black", indent=0):
     template_start = '''
 <g id="lock_holder_outline_{kind}" transform="translate({x} {y}) scale({scale} {scale})">
-    <circle cx="0" cy="-2800" r="200" fill="none" stroke="black" stroke-width="5.0"/>
     <path d="
         M  1650, 1000  a 400,400 90 0 1  -400,  400
         l -2500,    0  a 400,400 90 0 1  -400, -400
         l     0,-3800  a 400,400 90 0 1   400, -400
         l  2500,    0  a 400,400 90 0 1   400,  400
-        l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+        l     0, 3800" fill="none" stroke="{color}" stroke-width="5.0"/>
+    <path id="screw_center" d="M -80,-2800 80,-2800 M 0,-2880 0,-2720" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle id="screw_hole" cx="0" cy="-2800" r="200" fill="none" stroke="{color}" stroke-width="5.0"/>
+    <path id="lock_center" d="M -80,-100 80,-100 M 0,-180 0,-20" fill="none" stroke="black" stroke-width="5.0"/>
 '''
     template_plain = '''
-    <circle id="lock_hole_circle" cx="0" cy="-100" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+    <circle id="lock_hole_circle" cx="0" cy="-100" r="920" fill="none" stroke="{color}" stroke-width="5.0"/>
 '''
     template_notch = '''
     <path id="lock_hole_notch" d="
@@ -388,44 +393,35 @@ def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, inden
         A 915,915 0 0 1  907,-232
         A 150,150 0 0 0  907,  32
         A 915,915 0 0 1 -907,  32
-        A 150,150 0 0 0 -907,-232 Z" fill="none" stroke="black" stroke-width="5.0"/>
+        A 150,150 0 0 0 -907,-232 Z" fill="none" stroke="{color}" stroke-width="5.0"/>
 '''
     template_end = "</g>  <!-- id=\"lock_holder_outline_{kind}\" -->\n"
 
 
     result = []
-    for line in template_start.format(kind=kind,x=x,y=y,scale=scale,rotate=rotate).splitlines():
+    for line in template_start.format(kind=kind,x=x,y=y,scale=scale,rotate=rotate,color=color).splitlines():
         if line == '':
             result.append("\n")
         else:
             result.append(" "*4*indent + line)
 
     if   kind == ("plain"):
-        result.append(" "*4*indent + template_plain)
+        result.append(" "*4*indent + template_plain.format(color=color))
     elif kind == ("notch"):
-        result.append(" "*4*indent + template_notch)
+        result.append(" "*4*indent + template_notch.format(color=color))
 
     result.append(" "*4*indent + template_end.format(kind=kind))
     return "\n".join(result)
 
 
 ############################################################
-def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
-#    template_start = '''
-#<g id="lock_lever_outline" transform="translate({x} {y}) scale({scale} {scale}) rotate({rotate})">
-#    <ellipse cx="0" cy="-200" rx="700" ry="2200" fill="none" stroke="black" stroke-width="5.0"/>
-#    <g transform="rotate(30 0 1210)">
-#        <rect x="-128" y="810" width="256" height="800" fill="none" stroke="black" stroke-width="5.0"/>
-#        <circle cx="264" cy="1200" r="80" fill="none" stroke="black" stroke-width="5.0"/>
-#        <circle cx="-264" cy="1200" r="80" fill="none" stroke="black" stroke-width="5.0"/>
-#    </g>
-#'''
+def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, color="black", indent=0):
     template = '''
 <g id="lock_lever_outline" transform="translate({x} {y}) scale({scale} {scale}) rotate({rotate})">
     <g transform="rotate(40)">
-        <rect x="-128" y="-400" width="256" height="800" fill="none" stroke="black" stroke-width="5.0"/>
-        <circle cx="264" cy="0" r="80" fill="none" stroke="black" stroke-width="5.0"/>
-        <circle cx="-264" cy="0" r="80" fill="none" stroke="black" stroke-width="5.0"/>
+        <rect x="-128" y="-400" width="256" height="800" fill="none" stroke="{color}" stroke-width="5.0"/>
+        <circle cx="264" cy="0" r="80" fill="none" stroke="{color}" stroke-width="5.0"/>
+        <circle cx="-264" cy="0" r="80" fill="none" stroke="{color}" stroke-width="5.0"/>
     </g>
     <path d="M    0,600
              A  600,600 0 0 0  450.0,-396.9
@@ -435,12 +431,12 @@ def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
              L -300,-793.7
              A  600,600 0 0 1 -450.0,-396.9
              A  600,600 0 0 0    0.0, 600.0
-             " fill="none" stroke="black" stroke-width="5.0"/>
+             " fill="none" stroke="{color}" stroke-width="5.0"/>
 </g>  <!-- id="lock_lever_outline" -->
 '''
 
     result = []
-    for line in template.format(x=x,y=y,scale=scale,rotate=rotate).splitlines():
+    for line in template.format(x=x,y=y,scale=scale,rotate=rotate,color=color).splitlines():
         if line == '':
             result.append("\n")
         else:
@@ -475,7 +471,7 @@ def lock_holder(config, descr="", alignment=True, outline=True, x=0.0, y=0.0, sc
     if config is not None:
         key_inserted = (config[-4:] == " key")
         if key_inserted:
-            result.append(key(config=config[:-4], x=400, y=-2360, scale=2.0, indent=indent+1))
+            result.append(key(config=config[:-4], x=400, y=-2400, scale=2.0, indent=indent+1))
             result.append(lock(config=config, x=400, y=-2200, scale=2.0, indent=indent+1))
         else:
             result.append(lock(config=config, x=0, y=-2100, scale=2.0, indent=indent+1))
@@ -498,19 +494,37 @@ def paper_sheet(configs, kind="front", pagesize="US-letter", indent=0):
 
     if pagesize=="US-letter":
         ## US letter page size
-        #result.append(alignment_mark(kind="empty", x=  0, y=   0, scale=0.2, indent=indent+1))
-        #result.append(alignment_mark(kind="empty", x=816, y=   0, scale=0.2, indent=indent+1))
-        #result.append(alignment_mark(kind="empty", x=  0, y=1056, scale=0.2, indent=indent+1))
-        #result.append(alignment_mark(kind="empty", x=816, y=1056, scale=0.2, indent=indent+1))
+        for nx in range(4):
+            x = nx*3300*0.06 + 111.0
+            y = 132.0 - 25.0
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+            y = 960.0 + 25.0
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+        for ny in range(4):
+            x = 111.0 - 25.0
+            y = ny*4600*0.06 + 132
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+            x = 705.0 + 25.0
+            y = ny*4600*0.06 + 132
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
         result.append(ruler_guide(x=100, y=50, scale=1.0, indent=indent+1))
         xoffset=0.5*3300*0.06 + (816-3*3300*0.06)/2  # Centering the grid of lock_holder horizontally on the page
         yoffset=3500*0.06 + (1056-3*4600*0.06)/2  # Centering the grid of lock_holder vertically on the page
     else:
         ## A4 page size
-        #result.append(alignment_mark(kind="empty", x=     0, y=     0, scale=0.2, indent=indent+1))
-        #result.append(alignment_mark(kind="empty", x=793.75, y=     0, scale=0.2, indent=indent+1))
-        #result.append(alignment_mark(kind="empty", x=     0, y=1122.5, scale=0.2, indent=indent+1))
-        #result.append(alignment_mark(kind="empty", x=793.75, y=1122.5, scale=0.2, indent=indent+1))
+        for nx in range(4):
+            x = nx*3300*0.06 + 99.875
+            y = 132.0 - 25.0
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+            y = 960. + 25.0
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+        for ny in range(4):
+            x = 99.875 - 25.0
+            y = ny*4600*0.06 + 132
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+            x = 693.875 + 25.0
+            y = ny*4600*0.06 + 132
+            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
         result.append(ruler_guide(x=100, y=50, scale=1.0, indent=indent+1))
         xoffset=0.5*3300*0.06 + (793.75-3*3300*0.06)/2  # Centering the grid of lock_holder horizontally on the page
         yoffset=3500*0.06 + (1056-3*4600*0.06)/2  # Use US-letter offset for A4
@@ -525,13 +539,13 @@ def paper_sheet(configs, kind="front", pagesize="US-letter", indent=0):
         for (n, (config, descr)) in enumerate(configs):
             x = ((2 - n % 3) * 3300*0.06 + xoffset)
             y = ((n // 3) * 4600*0.06 + yoffset)
-            result.append(lock_holder(config=config, descr=descr, alignment=True, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
+            result.append(lock_holder(config=config, descr=descr, alignment=True, outline=False, scale=0.06, x=x, y=y, indent=indent+1))
 
     else:  # kind == "cut"
         for n in range(9):
             x = ((n %  3) * 3300*0.06 + xoffset)
             y = ((n // 3) * 4600*0.06 + yoffset)
-            result.append(lock_holder_outline(kind="plain", scale=0.06, x=x, y=y, indent=indent+1))
+            result.append(lock_holder_outline(kind="plain", scale=0.06, x=x, y=y, color="red", indent=indent+1))
 
     result.append(" "*4*indent + template_end.format(kind=kind,pagesize=pagesize))
     return "\n".join(result)
@@ -561,11 +575,11 @@ def plastic_cut_sheet(pagesize="12x12", indent=0):
             x = nx * 3300*0.06 + xoffset
             y = ny * 4600*0.06 + yoffset
             if (nx < 2):
-                result.append(lock_holder_outline(kind="plain", scale=0.06, x=x, y=y, indent=indent+1))
+                result.append(lock_holder_outline(kind="plain", scale=0.06, x=x, y=y, color="red", indent=indent+1))
             else:
-                result.append(lock_holder_outline(kind="notch", scale=0.06, x=x, y=y, indent=indent+1))
-        result.append(lock_lever_outline(x=x+136, y=y+50, scale=0.06, rotate=-5, indent=indent+1))
-        result.append(lock_lever_outline(x=x+173, y=y-150, scale=0.06, rotate=175, indent=indent+1))
+                result.append(lock_holder_outline(kind="notch", scale=0.06, x=x, y=y, color="red", indent=indent+1))
+        result.append(lock_lever_outline(x=x+136, y=y+50, scale=0.06, rotate=-5, color="red", indent=indent+1))
+        result.append(lock_lever_outline(x=x+173, y=y-150, scale=0.06, rotate=175, color="red", indent=indent+1))
 
     result.append(ruler_guide(x=100, y=14, scale=1.0, indent=indent+1))
     result.append(ruler_guide(x=1130, y=100, scale=1.0, rotate=90, indent=indent+1))
