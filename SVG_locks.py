@@ -220,17 +220,10 @@ def pin(kind="plain", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, inden
 </g>  <!-- id="spool_pin" -->'''
     template_serrated = '''
 <g id="serrated_pin" transform="translate({x},{y})">
-    <path id="serrated_pin_base" d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3" fill="#409020" stroke="black" stroke-width="2.0"/>
-    <path id="serrated_pin_line_0" d="M -50,-20 L 50,-20" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_1" d="M -50,-30 L 50,-30" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_2" d="M -50,-40 L 50,-40" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_3" d="M -50,-50 L 50,-50" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_4" d="M -50,-60 L 50,-60" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_5" d="M -50,-70 L 50,-70" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_6" d="M -50,-80 L 50,-80" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_7" d="M -50,-90 L 50,-90" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_8" d="M -50,-100 L 50,-100" fill="none" stroke="black" stroke-width="5.0"/>
-    <path id="serrated_pin_line_9" d="M -50,-110 L 50,-110" fill="none" stroke="black" stroke-width="5.0"/>
+    <path id="serrated_pin_base" d="M 0,-3  L 45,-3  Q 50,-3 50,-8  L 50,-122  Q 50,-127 45,-127 L -45,-127  Q -50,-127 -50,-122  L -50, -8  Q -50,-3 -45,-3  L 0,-3"
+        fill="#409020" stroke="black" stroke-width="2.0"/>
+    <path id="serrated_pin_lines" d="M -50, -20 L 50, -20  M -50,-30 L 50,-30  M -50, -40 L 50, -40  M -50,-50 L 50,-50  M -50, -60 L 50, -60
+        M -50,-70 L 50,-70  M -50, -80 L 50, -80  M -50,-90 L 50,-90  M -50,-100 L 50,-100  M -50,-110 L 50,-110" fill="none" stroke="black" stroke-width="5.0"/>
 </g>  <!-- id="serrated_pin" -->'''
     template_key = '''
 <g id="pin_{pin_length}" transform="translate({x},{y})">
