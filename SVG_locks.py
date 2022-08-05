@@ -359,10 +359,38 @@ def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
             result.append(pin(kind=kind, x=offset, y=110-10*pin_length, indent=indent+1))
             result.append(spring(length=12-pin_length, x=offset, y=-20-10*pin_length, indent=indent+1))
 
-    # Finally, the text
+    # Finally, the text & images
     result.append(" "*4*indent + '''    <text x="0" y="560" text-anchor="middle" font-size="90">{config}</text>'''.format(config=config))
 
     result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->".format(config=config))
+    return "\n".join(result)
+
+
+############################################################
+def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, mirror=False, color="black", indent=0):
+    template = '''
+<g id="lock_lever_outline" transform="translate({x} {y}) scale({scale}) rotate({rotate})">
+    <g id="lever_attachments" transform="rotate(35)">
+        <rect x="-128" y="-400" width="256" height="800" fill="none" stroke="{color}" stroke-width="5.0"/>
+        <path id="lever_center_crosshairs" d="M -100,0 100,0 M 0,-100 0,100" fill="none" stroke="black" stroke-width="5.0"/>
+        <circle cx="264" cy="0" r="80" fill="none" stroke="{color}" stroke-width="5.0"/>
+        <circle cx="-264" cy="0" r="80" fill="none" stroke="{color}" stroke-width="5.0"/>
+    </g>  <!-- id="lever_attachments" -->
+    <path d="M  -700,0
+             A  700,700 0 1 0  139.8,-685.9
+             A  300,300 0 0 1 -100.0,-966.5
+             L -200.2,-3211.1
+             A  200,200 0 0 0 -700.0,-3212.4
+             L -700,0
+             " fill="none" stroke="{color}" stroke-width="5.0"/>
+</g>  <!-- id="lock_lever_outline" -->'''
+
+    result = []
+    for line in template.format(x=x,y=y,scale=scale,rotate=rotate,color=color).splitlines():
+        if line == '':
+            result.append("")
+        else:
+            result.append(" "*4*indent + line)
     return "\n".join(result)
 
 
@@ -381,11 +409,11 @@ def lock_holder_outline(kind="plain", alignment=False, x=0.0, y=0.0, scale=1.0, 
     <path id="lock_hole_notch_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>'''
     template_nut_recess = '''    <path id="lock_nut_recess" transform="translate(0 -2600) scale(4.08)" d="
         M 100,0  50,86.6 -50,86.6 -100,0 -50,-86.6 50,-86.6 100,0 50,0 A 50,50 0 1 0 50,0.001 Z" fill="yellow" stroke="none"/>'''
-    template_end = '''    <path d="
-        M  1850, 1000  a 400,400 90 0 1  -400,  400
-        l -2900,    0  a 400,400 90 0 1  -400, -400
-        l     0,-3800  a 400,400 90 0 1   400, -400
-        l  2900,    0  a 400,400 90 0 1   400,  400
+    template_end = '''    <path id="lock_holder_outer_edge" d="
+        M  1850, 1000  a 400,400 90 0 1  -400, 400
+        l -2900,    0  a 400,400 90 0 1  -400,-400
+        l     0,-3800  a 400,400 90 0 1   400,-400
+        l  2900,    0  a 400,400 90 0 1   400, 400
         l     0, 3800" fill="none" stroke="{color}" stroke-width="5.0"/>
     <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
     <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="{color}" stroke-width="5.0"/>
@@ -428,42 +456,29 @@ def lock_holder_outline(kind="plain", alignment=False, x=0.0, y=0.0, scale=1.0, 
 
 
 ############################################################
-def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, mirror=False, color="black", indent=0):
-    template = '''
-<g id="lock_lever_outline" transform="translate({x} {y}) scale({scale}) rotate({rotate})">
-    <g id="lever_attachments" transform="rotate(35)">
-        <rect x="-128" y="-400" width="256" height="800" fill="none" stroke="{color}" stroke-width="5.0"/>
-        <path id="lever_center_crosshairs" d="M -100,0 100,0 M 0,-100 0,100" fill="none" stroke="black" stroke-width="5.0"/>
-        <circle cx="264" cy="0" r="80" fill="none" stroke="{color}" stroke-width="5.0"/>
-        <circle cx="-264" cy="0" r="80" fill="none" stroke="{color}" stroke-width="5.0"/>
-    </g>  <!-- id="lever_attachments" -->
-    <path d="M  -700,0
-             A  700,700 0 1 0  139.8,-685.9
-             A  300,300 0 0 1 -100.0,-966.5
-             L -200.2,-3211.1
-             A  200,200 0 0 0 -700.0,-3212.4
-             L -700,0
-             " fill="none" stroke="{color}" stroke-width="5.0"/>
-</g>  <!-- id="lock_lever_outline" -->'''
+def lock_holder(lock_configuration, has_key=True, descr="", descr_color=None, alignment=True, outline=True, x=0.0, y=0.0, scale=1.0, indent=0):
+    template_start = '''
+<g id="lock_holder" transform="translate({x} {y}) scale({scale} {scale})">'''
+    template_descr_color = '''    <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+        l 0,-200 l 3700,0 l 0,200 z" fill="{descr_color}" stroke="none" fill-opacity="0.2"/>'''
+    template_descr = '''    <text x="0" y="1200" text-anchor="middle" font-size="240">{descr}</text>'''
+    template_end = '''</g>  <!-- id="lock_holder" -->'''
 
     result = []
-    for line in template.format(x=x,y=y,scale=scale,rotate=rotate,color=color).splitlines():
+    for line in template_start.format(x=x,y=y,scale=scale).splitlines():
         if line == '':
             result.append("")
         else:
             result.append(" "*4*indent + line)
-    return "\n".join(result)
 
+    if descr_color:
+        for line in template_descr_color.format(descr_color=descr_color).splitlines():
+            if line == '':
+                result.append("")
+            else:
+                result.append(" "*4*indent + line)
 
-############################################################
-def lock_holder(lock_configuration, has_key=True, descr="", alignment=True, outline=True, x=0.0, y=0.0, scale=1.0, indent=0):
-    template_start = '''
-<g id="lock_holder" transform="translate({x} {y}) scale({scale} {scale})">
-    <text x="0" y="1200" text-anchor="middle" font-size="240">{descr}</text>'''
-    template_end = '''</g>  <!-- id="lock_holder" -->'''
-
-    result = []
-    for line in template_start.format(descr=descr,x=x,y=y,scale=scale).splitlines():
+    for line in template_descr.format(descr=descr).splitlines():
         if line == '':
             result.append("")
         else:
@@ -510,10 +525,10 @@ def paper_sheet(configs, kind="lock_diagrams", page_title=None, alignment=False,
         result.append(" "*4*indent + '''    <text id="page_title" x="{xcenter}" y="30" text-anchor="middle" font-size="16">{page_title}</text>'''.format(xcenter=xcenter,page_title=page_title))
 
     if   (kind == "lock_diagrams"):
-        for (n, (lock_configuration, has_key, description)) in enumerate(configs):
+        for (n, (lock_configuration, has_key, description, description_color)) in enumerate(configs):
             x = ((n %  3) * (3700+300)*0.06 + xoffset)
             y = ((n // 3) * (4600+400)*0.06 + yoffset)
-            result.append(lock_holder(lock_configuration=lock_configuration, has_key=has_key, descr=description, alignment=alignment, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
+            result.append(lock_holder(lock_configuration=lock_configuration, has_key=has_key, descr=description, descr_color=description_color, alignment=alignment, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
 
     else:  # kind == "cut"
         for n in range(9):
@@ -586,9 +601,11 @@ with open("example_locks.csv") as file:
 pages = dict()
 #sys.exit()
 for line in csv_lines:
-    (line_number, (diagram_type, output_filename, page_size, name, lock_configuration, show_key)) = line
+    (line_number, (diagram_type, output_filename, page_size, name, lock_configuration, show_key, name_color)) = line
     if diagram_type not in supported_diagrams:
         continue
+    if name_color == "":
+        name_color = None
 
     if ((diagram_type == "plastic_cut_sheet_a") or (diagram_type == "plastic_cut_sheet_b")) and \
        (page_size != "12x12"):
@@ -611,9 +628,9 @@ for line in csv_lines:
             print("Error: {}, line {} - {} output files cannot have more than one diagram per output page".format(input_filename, line_number, diagram_type))
             sys.exit(0)
 
-        pages[output_filename].append({"diagram_type": diagram_type, "page_size": page_size, "name": name, "lock_configuration":lock_configuration, "show_key": show_key })
+        pages[output_filename].append({"diagram_type": diagram_type, "page_size": page_size, "name": name, "lock_configuration":lock_configuration, "show_key": show_key, "name_color": name_color })
     else:
-        pages[output_filename] = [{"diagram_type": diagram_type, "page_size": page_size, "name": name, "lock_configuration":lock_configuration, "show_key": show_key }]
+        pages[output_filename] = [{"diagram_type": diagram_type, "page_size": page_size, "name": name, "lock_configuration":lock_configuration, "show_key": show_key, "name_color": name_color }]
 
 
 for output_filename in pages:
@@ -643,7 +660,7 @@ for output_filename in pages:
     elif diagram_type == "lock_diagrams":
         configs = []
         for config in page:
-            configs.append( (config["lock_configuration"], config["show_key"] == "yes", config["name"]) )
+            configs.append( (config["lock_configuration"], config["show_key"] == "yes", config["name"], config["name_color"]) )
         with open(output_filename, "w") as SVG_file:
             SVG_file.write(SVG_root(kind="start", pagesize=pagesize))
             SVG_file.write(paper_sheet(configs, kind=diagram_type, page_title=output_filename, alignment=True, pagesize=pagesize, indent=1))
