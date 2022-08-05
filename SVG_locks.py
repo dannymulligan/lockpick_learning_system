@@ -249,60 +249,26 @@ def pin(kind="plain", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, inden
 
 
 ############################################################
-def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
-    template_start = '''<g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
-    <mask id="lock_mask">
-        <path id="printable_mask" d="M -950,-280 l 1500,0 0,950 -1500,0 Z" fill="white" stroke="none"/>
-    </mask>
-    <path id="visible_printable_mask" d="M -950,-280 l 1500,0 0,950 -1500,0 Z" fill="none" stroke="none"/>
-    <g id="lock_picture" mask="url(#lock_mask)">
-        <path id="lock_body_top" d="M {x0},-40 {x1},-40 {x1},0 {x2},0 {x2},-250 {x0},-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
-        <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
-        <path id="lock_body_cylinder" d="M {xx0},-35 {xx1},-35 {xx1},5 {xx2},5 {xx2},440 {xx1},440 {xx1},480 {xx0},480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
-        <path id="lock_body_bottom" d="M {x0},485 {x1},485 {x1},445 {x2},445 {x2},600 {x0},600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
-        <text x="-25" y="560" text-anchor="middle" font-size="80">{config}</text>
-    </g>  <!-- id="lock_picture" -->"'''
+def lock_body(pin_slots, x=0.0, y=0.0, scale=1.0, indent=0):
+    template_start = '''<g id="lock_body_{pin_slots}">
+    <path id="lock_body_top" d="M {x0},-40 {x1},-40 {x1},0 {x2},0 {x2},-250 {x0},-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+    <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+    <path id="lock_body_cylinder" d="M {xx0},-35 {xx1},-35 {xx1},5 {x3},5 {x3},440 {xx1},440 {xx1},480 {xx0},480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+    <path id="lock_body_bottom" d="M {x0},485 {x1},485 {x1},445 {x2},445 {x2},600 {x0},600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+</g>  <!-- id="lock_body_{pin_slots}" -->"'''
 
-    slots = (len(config)+1)//3
-
+    xx0 = -150*(pin_slots/2.0) - 145
+    x0  = -150*(pin_slots/2.0) - 100
+    xx1 = -150*(pin_slots/2.0) - 55
+    x1  = -150*(pin_slots/2.0) - 50
+    x2  =  150*(pin_slots/2.0) + 50
+    x3  =  150*(pin_slots/2.0) + 150
     result = []
-
-    xx0 = -150*(slots/2.0) - 145
-    xx1 = -150*(slots/2.0) - 55
-    xx2 =  150*(slots/2.0) + 150
-    x0 = -150*(slots/2.0) - 100
-    x1 = -150*(slots/2.0) - 50
-    x2 =  150*(slots/2.0) + 50
-    x3 =  150*(slots/2.0) + 150
-    for line in template_start.format(x=x,y=y,xx0=xx0,xx1=xx1,xx2=xx2,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
+    for line in template_start.format(x=x,y=y,xx0=xx0,xx1=xx1,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,pin_slots=pin_slots).splitlines():
         if line == '':
             result.append("")
         else:
             result.append(" "*4*indent + line)
-
-    for (offset,kind,pin_label) in [(150*(i+0.5-slots/2.0), config[i*3], config[i*3+1]) for i in range(slots)]:
-        if   (kind == "P") or (kind == "p"):  kind = "plain"
-        elif (kind == "S") or (kind == "s"):  kind = "spool"
-        elif (kind == "G") or (kind == "g"):  kind = "serrated"
-        elif (kind == "_"):  continue
-
-        if pin_label == "_":
-            pin_length = 5
-            pin_label = ""
-        else:
-            pin_length = int(pin_label)
-
-        if has_key:
-            # Key inserted, tops of key pins line up with barrel
-            result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=0, indent=indent+1))
-            result.append(pin(kind=kind, x=offset, y=0, indent=indent+1))
-            result.append(spring(length=1, x=offset, y=-130, indent=indent+1))
-        else:
-            # Key not inserted, bottoms of key pins line up with each other
-            result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=110-10*pin_length, indent=indent+1))
-            result.append(pin(kind=kind, x=offset, y=110-10*pin_length, indent=indent+1))
-            result.append(spring(length=12-pin_length, x=offset, y=-20-10*pin_length, indent=indent+1))
-    result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->".format(config=config))
     return "\n".join(result)
 
 
@@ -327,34 +293,81 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
         else:
             result.append(" "*4*indent + line)
 
-    result.append(" "*4*(indent+1) + '''<mask id="key_mask_{config}">'''.format(config="".join(config_spec)))
-    result.append(" "*4*(indent+2) + '''<path id="printable_mask" d="M -950,-200 l 1500,0 0,950 -1500,0 Z" fill="white" stroke="none"/>''')
-    template_mask = '''<path id="clip_path_{n}" d="M {x},{y} l 25,0  150,-150  0,-100  -350,0  0,100  150,150  25,0 Z" fill="black" stroke="none"/>'''
-    for (n, offset,pin) in [(i, 150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
-        result.append(" "*4*(indent+2) + template_mask.format(n=n,x=offset,y=230+pin*10))
-    result.append(" "*4*(indent+1) + "</mask>")
-
-    template_key = '''    <path id="visible_printable_mask" d="M -950,-200 l 1500,0 0,950 -1500,0 Z" fill="none" stroke="none"/>
-    <path id="key_outline_rail" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300 Z" fill="#6e6e6e" stroke="black" mask="url(#key_mask_{config})"/>
-    <path id="key_outline_groove0" d="M {xl},350  {xr},350 l 150,0 -50,-50 L {xr},300 {xl},300 Z" fill="#999999" stroke="none" mask="url(#key_mask_{config})"/>
-    <path id="key_outline_groove1" d="M {xl},475  {xr},475 l 125,0 50,-50 L {xr},425 {xl},425 Z" fill="#474747" stroke="none" mask="url(#key_mask_{config})"/>
+    template_key = '''    <path id="key_outline_rail" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+    <path id="key_outline_groove0" d="M {xl},350  {xr},350 l 150,0 -50,-50 L {xr},300 {xl},300 Z" fill="#b9b9b9" stroke="none"/>
+    <path id="key_outline_groove1" d="M {xl},475  {xr},475 l 125,0 50,-50 L {xr},425 {xl},425 Z" fill="#848484" stroke="none"/>
     <path id="key_outline_handle" d="
         m {xl},200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
         a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
-        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#6e6e6e" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>
-    <circle id="key_outline_handle_hole" cx="{xl0}" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>'''
+        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+    <circle id="key_outline_handle_hole" cx="{xl0}" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>'''
     for line in template_key.format(xl0=xl-500,xl=xl-150,xr=xr+50,config="".join(config_spec)).splitlines():
         if line == '':
             result.append("")
         else:
             result.append(" "*4*indent + line)
 
+    template_mask = '''<path id="key_cut_{n}" transform="translate({x},{y})" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>'''
+    for (n, offset,pin) in [(i, 150*(i+0.5-slots/2.0), int(config_spec[i])) for i in range(slots)]:
+        result.append(" "*4*(indent+1) + template_mask.format(n=n,x=offset,y=230+pin*10))
+
     result.append(" "*4*indent + "</g>  <!-- id=\"key_{config}\" -->".format(config="".join(config_spec)))
     return "\n".join(result)
 
 
 ############################################################
-def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, color="black", indent=0):
+def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
+    template_start = '''<g id="lock_{config}" transform="translate({x} {y}) scale({scale})">'''
+
+    slots = (len(config)+1)//3
+
+    result = []
+    for line in template_start.format(config=config, x=x, y=y, scale=scale).splitlines():
+        if line == '':
+            result.append("")
+        else:
+            result.append(" "*4*indent + line)
+
+    # Lowest level in the drawing is the lock body
+    result.append(lock_body(pin_slots=slots, x=0, y=0, indent=indent+1))
+
+    # Next is the key
+    if has_key:
+        result.append(key(config, x=0, y=-75, indent=indent+1))
+
+    # Then the springs, & pins
+    for (offset,kind,pin_label) in [(150*(i+0.5-slots/2.0), config[i*3], config[i*3+1]) for i in range(slots)]:
+        if   (kind == "P") or (kind == "p"):  kind = "plain"
+        elif (kind == "S") or (kind == "s"):  kind = "spool"
+        elif (kind == "G") or (kind == "g"):  kind = "serrated"
+        elif (kind == "_"):  continue
+
+        if pin_label == "_":
+            pin_length = 5
+            pin_label = ""
+        else:
+            pin_length = int(pin_label)
+
+        if has_key:
+            # Key inserted, tops of key pins line up with barrel
+            result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=0, indent=indent+1))
+            result.append(pin(kind=kind, x=offset, y=0, indent=indent+1))
+            result.append(spring(length=1, x=offset, y=-130, indent=indent+1))
+        else:
+            # Key not inserted, bottoms of key pins line up with each other
+            result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=110-10*pin_length, indent=indent+1))
+            result.append(pin(kind=kind, x=offset, y=110-10*pin_length, indent=indent+1))
+            result.append(spring(length=12-pin_length, x=offset, y=-20-10*pin_length, indent=indent+1))
+
+    # Finally, the text
+    result.append(" "*4*indent + '''    <text x="0" y="560" text-anchor="middle" font-size="90">{config}</text>'''.format(config=config))
+
+    result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->".format(config=config))
+    return "\n".join(result)
+
+
+############################################################
+def lock_holder_outline(kind="plain", alignment=False, x=0.0, y=0.0, scale=1.0, rotate=0.0, color="black", indent=0):
     template_start = '''
 <g id="lock_holder_outline_{kind}" transform="translate({x} {y}) scale({scale} {scale})">'''
     template_plain = '''    <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="{color}" stroke-width="5.0"/>
@@ -385,6 +398,12 @@ def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, color
             result.append("")
         else:
             result.append(" "*4*indent + line)
+
+    if alignment:
+        result.append(alignment_mark(kind="SE", x= 1850, y= 1400, indent=indent+1))
+        result.append(alignment_mark(kind="SW", x=-1850, y= 1400, indent=indent+1))
+        result.append(alignment_mark(kind="NE", x= 1850, y=-3200, indent=indent+1))
+        result.append(alignment_mark(kind="NW", x=-1850, y=-3200, indent=indent+1))
 
     if   kind == ("plain"):
         for line in template_plain.format(color=color).splitlines():
@@ -450,22 +469,11 @@ def lock_holder(lock_configuration, has_key=True, descr="", alignment=True, outl
         else:
             result.append(" "*4*indent + line)
 
-    if alignment:
-        result.append(alignment_mark(kind="SE", x= 1850, y= 1400, indent=indent+1))
-        result.append(alignment_mark(kind="SW", x=-1850, y= 1400, indent=indent+1))
-        result.append(alignment_mark(kind="NE", x= 1850, y=-3200, indent=indent+1))
-        result.append(alignment_mark(kind="NW", x=-1850, y=-3200, indent=indent+1))
+    if lock_configuration is not None:
+        result.append(lock(config=lock_configuration, has_key=has_key, x=500, y=-2450, scale=2.4, indent=indent+1))
 
     if outline:
-        result.append(lock_holder_outline(kind="plain", x=0, y=0, scale=1.0, indent=indent+1))
-
-    if lock_configuration is not None:
-        if has_key:
-            result.append(lock(config=lock_configuration, has_key=has_key, x=500, y=-2450, scale=2.4, indent=indent+1))
-            result.append(key(config=lock_configuration, x=500, y=-2640, scale=2.4, indent=indent+1))
-        else:
-            result.append(key(config=lock_configuration, x=500, y=-2640, scale=2.4, indent=indent+1))
-            result.append(lock(config=lock_configuration, has_key=has_key, x=500, y=-2450, scale=2.4, indent=indent+1))
+        result.append(lock_holder_outline(kind="plain", alignment=True, x=0, y=0, scale=1.0, indent=indent+1))
 
     result.append(" "*4*indent + template_end)
     return "\n".join(result)
@@ -486,29 +494,15 @@ def paper_sheet(configs, kind="lock_diagrams", page_title=None, alignment=False,
     if pagesize=="US-letter":
         # US letter page size
         # (width = 816, height = 1056)
-        xoffset = 0.5*3700*0.06 + (816-3*3700*0.06)/2  # Center the grid of lock_holder horizontally on the page
+        xoffset = 0.5*3700*0.06 + (816-3*3700*0.06-2*300*0.06)/2  # Center the grid of lock_holder horizontally on the page
         xcenter = 816*0.5
-        yoffset = 3200*0.06 + (1056-3*4600*0.06)/2  # Center the grid of lock_holder vertically on the page
+        yoffset = 3200*0.06 + (1056-3*4600*0.06-2*400*0.06)/2  # Center the grid of lock_holder vertically on the page
     else:
         # A4 page size
         # (width = 793.75, height = 1122.5)
-        xoffset = 0.5*3700*0.06 + (793.75-3*3700*0.06)/2  # Center the grid of lock_holder horizontally on the page
+        xoffset = 0.5*3700*0.06 + (793.75-3*3700*0.06-2*300*0.06)/2  # Center the grid of lock_holder horizontally on the page
         xcenter = 793.75*0.5
-        yoffset = 3200*0.06 + (1122.5-3*4600*0.06)/2  # Center the grid of lock_holder vertically on the page
-
-    if alignment:
-        for nx in range(4):
-            x = nx*3700*0.06 + xoffset - 0.5*3700*0.06
-            y = yoffset - 3200*0.06 - 25.0
-            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
-            y = y + 50 + 3*4600*0.06
-            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
-        for ny in range(4):
-            x = xoffset - 0.5*3700*0.06 - 25.0
-            y = ny*4600*0.06 + yoffset - 3200*0.06
-            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
-            x = x + 50.0 + 3*3700*0.06
-            result.append(alignment_mark(kind="empty", x=x, y=y, scale=0.2, indent=indent+1))
+        yoffset = 3200*0.06 + (1122.5-3*4600*0.06-2*400*0.06)/2  # Center the grid of lock_holder vertically on the page
 
     result.append(ruler_guide(x=20, y=60, scale=1.0, indent=indent+1))
 
@@ -517,14 +511,14 @@ def paper_sheet(configs, kind="lock_diagrams", page_title=None, alignment=False,
 
     if   (kind == "lock_diagrams"):
         for (n, (lock_configuration, has_key, description)) in enumerate(configs):
-            x = ((n %  3) * 3700*0.06 + xoffset)
-            y = ((n // 3) * 4600*0.06 + yoffset)
-            result.append(lock_holder(lock_configuration=lock_configuration, has_key=has_key, descr=description, alignment=True, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
+            x = ((n %  3) * (3700+300)*0.06 + xoffset)
+            y = ((n // 3) * (4600+400)*0.06 + yoffset)
+            result.append(lock_holder(lock_configuration=lock_configuration, has_key=has_key, descr=description, alignment=alignment, outline=True, scale=0.06, x=x, y=y, indent=indent+1))
 
     else:  # kind == "cut"
         for n in range(9):
-            x = ((n %  3) * 3700*0.06 + xoffset)
-            y = ((n // 3) * 4600*0.06 + yoffset)
+            x = ((n %  3) * (3700+300)*0.06 + xoffset)
+            y = ((n // 3) * (4600+400)*0.06 + yoffset)
             result.append(lock_holder_outline(kind="plain", scale=0.06, x=x, y=y, color="red", indent=indent+1))
 
     result.append(" "*4*indent + template_end.format(kind=kind,pagesize=pagesize))
@@ -578,7 +572,6 @@ def plastic_cut_sheet(pagesize="12x12", kind="plastic_cut_sheet_a", page_title=N
 
 
 ############################################################
-import SVG_locks
 import csv
 import sys
 
@@ -631,30 +624,30 @@ for output_filename in pages:
 
     if  diagram_type  == "plastic_cut_sheet_a":
         with open(output_filename, "w") as SVG_file:
-            SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
-            SVG_file.write(SVG_locks.plastic_cut_sheet(pagesize="12x12", kind=diagram_type, page_title=output_filename, indent=1))
-            SVG_file.write(SVG_locks.SVG_root(kind="end"))
+            SVG_file.write(SVG_root(kind="start", pagesize=pagesize))
+            SVG_file.write(plastic_cut_sheet(pagesize="12x12", kind=diagram_type, page_title=output_filename, indent=1))
+            SVG_file.write(SVG_root(kind="end"))
 
     elif diagram_type == "plastic_cut_sheet_b":
         with open(output_filename, "w") as SVG_file:
-            SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
-            SVG_file.write(SVG_locks.plastic_cut_sheet(pagesize="12x12", kind=diagram_type, page_title=output_filename, indent=1))
-            SVG_file.write(SVG_locks.SVG_root(kind="end"))
+            SVG_file.write(SVG_root(kind="start", pagesize=pagesize))
+            SVG_file.write(plastic_cut_sheet(pagesize="12x12", kind=diagram_type, page_title=output_filename, indent=1))
+            SVG_file.write(SVG_root(kind="end"))
 
     elif diagram_type == "paper_cut_sheet":
         with open(output_filename, "w") as SVG_file:
-            SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
-            SVG_file.write(SVG_locks.paper_sheet([], kind="cut", page_title=output_filename, alignment=True, pagesize=pagesize, indent=1))
-            SVG_file.write(SVG_locks.SVG_root(kind="end"))
+            SVG_file.write(SVG_root(kind="start", pagesize=pagesize))
+            SVG_file.write(paper_sheet([], kind="cut", page_title=output_filename, alignment=True, pagesize=pagesize, indent=1))
+            SVG_file.write(SVG_root(kind="end"))
 
     elif diagram_type == "lock_diagrams":
         configs = []
         for config in page:
             configs.append( (config["lock_configuration"], config["show_key"] == "yes", config["name"]) )
         with open(output_filename, "w") as SVG_file:
-            SVG_file.write(SVG_locks.SVG_root(kind="start", pagesize=pagesize))
-            SVG_file.write(SVG_locks.paper_sheet(configs, kind=diagram_type, page_title=output_filename, alignment=False, pagesize=pagesize, indent=1))
-            SVG_file.write(SVG_locks.SVG_root(kind="end"))
+            SVG_file.write(SVG_root(kind="start", pagesize=pagesize))
+            SVG_file.write(paper_sheet(configs, kind=diagram_type, page_title=output_filename, alignment=True, pagesize=pagesize, indent=1))
+            SVG_file.write(SVG_root(kind="end"))
 
     elif page["diagram_type"] == "logo_sheets":
         print("Error: {}, line {} - logo_sheets not implemented".format(input_filename, line_number))

@@ -36,15 +36,15 @@ lock_diagrams,demo_page_2.svg,US-letter,Level 6,P9 P3 P1,yes
 lock_diagrams,demo_page_2.svg,US-letter,Level 6,__ P9 P5 P3,yes
 lock_diagrams,demo_page_2.svg,US-letter,Level 6,__ P8 P6 P4 __,yes
 ,,,,,
-lock_diagrams,demo_page_3.svg,US-letter,Level 7,P9 P5 P5 P5,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 7,P8 P5 P5 P6 __,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 7,P9 P3 P9 P6 __,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 8,P9 P5 P5 P5 P5,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 8,P8 P1 P7 P2 P5,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 8,P_ P_ P_ P_ P_,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 9,P9 P5 P5 P5,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 9,P8 P5 P5 P6 __,yes
-lock_diagrams,demo_page_3.svg,US-letter,Level 9,P9 P3 P9 P6 __,yes
+lock_diagrams,demo_page_3.svg,A4,Level 7,P9 P5 P5 P5,yes
+lock_diagrams,demo_page_3.svg,A4,Level 7,P8 P5 P5 P6 __,yes
+lock_diagrams,demo_page_3.svg,A4,Level 7,P9 P3 P9 P6 __,yes
+lock_diagrams,demo_page_3.svg,A4,Level 8,P9 P8 P5 P1 P0,yes
+lock_diagrams,demo_page_3.svg,A4,Level 8,P9 P1 P7 P2 P5 P0,yes
+lock_diagrams,demo_page_3.svg,A4,Level 8,P_ P_ P_ P_ P_,yes
+lock_diagrams,demo_page_3.svg,A4,Level 9,P9 P5 P5 P5,yes
+lock_diagrams,demo_page_3.svg,A4,Level 9,P8 P5 P5 P6 __,yes
+lock_diagrams,demo_page_3.svg,A4,Level 9,P9 P3 P9 P6 __,yes
 ,,,,,
 lock_diagrams,demo_page_4.svg,US-letter,Level 15,S3 P7,yes
 lock_diagrams,demo_page_4.svg,US-letter,Level 15,S9 __ P0 __,yes
