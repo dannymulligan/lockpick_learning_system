@@ -1,56 +1,56 @@
-﻿Notes:,,,,,
-Valid options for the first cell on each line are…,,,,,
-    plastic_cut_sheet_a,,,,,
-    plastic_cut_sheet_b,,,,,
-    paper_cut_sheet,,,,,
-    lock_diagrams,,,,,
-    logo_sheets,,,,,
-If the first cell must be blank or one of these options.,,,,,
-"The Show key column must contain ""yes"" or ""no"" (without the quotes).",,,,,
-,,,,,
-Type,Output filename,Page size,Name,Lock configuration,Show key
-,,,,,
-plastic_cut_sheet_a,demo_plastic_cut_sheet_a.svg,12x12,N/A,N/A,N/A
-plastic_cut_sheet_b,demo_plastic_cut_sheet_b.svg,12x12,N/A,N/A,N/A
-,,,,,
-paper_cut_sheet,demo_paper_cut_sheet_US-letter.svg,US-letter,N/A,N/A,N/A
-paper_cut_sheet,demo_paper_cut_sheet_A4.svg,A4,N/A,N/A,N/A
-,,,,,
-lock_diagrams,demo_page_1.svg,US-letter,Level 1,P5,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 1,__ P9 __,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 1,__ __ P0 __ __,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 2,P5 P5,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 2,__ P4 P6 __ __,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 2,__ P3 P7 __ __,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 3,P5 P5 P5,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 3,__ P4 P5 P6,yes
-lock_diagrams,demo_page_1.svg,US-letter,Level 3,__ P3 P5 P7 __,yes
-,,,,,
-lock_diagrams,demo_page_2.svg,US-letter,Level 4,P5 P5 P5 P5,yes
-lock_diagrams,demo_page_2.svg,US-letter,Level 4,P3 P5 P5 P6 __,no
-lock_diagrams,demo_page_2.svg,US-letter,Level 4,P3 P4 P5 P6 __,no
-lock_diagrams,demo_page_2.svg,US-letter,Level 5,P9 P5,yes
-lock_diagrams,demo_page_2.svg,US-letter,Level 5,__ P9 P4 __ __,yes
-lock_diagrams,demo_page_2.svg,US-letter,Level 5,__ P8 P3 __ __,no
-lock_diagrams,demo_page_2.svg,US-letter,Level 6,P9 P3 P1,yes
-lock_diagrams,demo_page_2.svg,US-letter,Level 6,__ P9 P5 P3,yes
-lock_diagrams,demo_page_2.svg,US-letter,Level 6,__ P8 P6 P4 __,yes
-,,,,,
-lock_diagrams,demo_page_3.svg,A4,Level 7,P9 P5 P5 P5,yes
-lock_diagrams,demo_page_3.svg,A4,Level 7,P8 P5 P5 P6 __,yes
-lock_diagrams,demo_page_3.svg,A4,Level 7,P9 P3 P9 P6 __,yes
-lock_diagrams,demo_page_3.svg,A4,Level 8,P9 P8 P5 P1 P0,yes
-lock_diagrams,demo_page_3.svg,A4,Level 8,P9 P1 P7 P2 P5 P0,yes
-lock_diagrams,demo_page_3.svg,A4,Level 8,P_ P_ P_ P_ P_,yes
-lock_diagrams,demo_page_3.svg,A4,Level 9,P9 P5 P5 P5,yes
-lock_diagrams,demo_page_3.svg,A4,Level 9,P8 P5 P5 P6 __,yes
-lock_diagrams,demo_page_3.svg,A4,Level 9,P9 P3 P9 P6 __,yes
-,,,,,
-lock_diagrams,demo_page_4.svg,US-letter,Level 15,S3 P7,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 15,S9 __ P0 __,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 16,__ G5 P3 __ __,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 16,__ G3 P6 __,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 17,__ S7 __ P3 __,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 18,G7 P3 __ __ __,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 19,__ S4 P7 P8 __,yes
-lock_diagrams,demo_page_4.svg,US-letter,Level 20,G_ P_ P_,no
+﻿Notes:,,,,,,
+Valid options for the first cell on each line are…,,,,,,
+    plastic_cut_sheet_a,,,,,,
+    plastic_cut_sheet_b,,,,,,
+    paper_cut_sheet,,,,,,
+    lock_diagrams,,,,,,
+    logo_sheets,,,,,,
+If the first cell must be blank or one of these options.,,,,,,
+"The Show key column must contain ""yes"" or ""no"" (without the quotes).",,,,,,
+,,,,,,
+Type,Output filename,Page size,Name,Lock configuration,Show key,Name background color
+,,,,,,
+plastic_cut_sheet_a,demo_plastic_cut_sheet_a.svg,12x12,N/A,N/A,N/A,N/A
+plastic_cut_sheet_b,demo_plastic_cut_sheet_b.svg,12x12,N/A,N/A,N/A,N/A
+,,,,,,
+paper_cut_sheet,demo_paper_cut_sheet_US-letter.svg,US-letter,N/A,N/A,N/A,N/A
+paper_cut_sheet,demo_paper_cut_sheet_A4.svg,A4,N/A,N/A,N/A,N/A
+,,,,,,
+lock_diagrams,demo_page_1.svg,US-letter,Level 1,P5,yes,white
+lock_diagrams,demo_page_1.svg,US-letter,Level 1,__ P9 __,yes,white
+lock_diagrams,demo_page_1.svg,US-letter,Level 1,__ __ P0 __ __,yes,white
+lock_diagrams,demo_page_1.svg,US-letter,Level 2,P5 P5,yes,white
+lock_diagrams,demo_page_1.svg,US-letter,Level 2,__ P4 P6 __ __,yes,white
+lock_diagrams,demo_page_1.svg,US-letter,Level 2,__ P3 P7 __ __,yes,white
+lock_diagrams,demo_page_1.svg,US-letter,Level 3,P5 P5 P5,yes,#e4b3d3
+lock_diagrams,demo_page_1.svg,US-letter,Level 3,__ P4 P5 P6,yes,#e4b3d3
+lock_diagrams,demo_page_1.svg,US-letter,Level 3,__ P3 P5 P7 __,yes,#e4b3d3
+,,,,,,
+lock_diagrams,demo_page_2.svg,US-letter,Level 4,P5 P5 P5 P5,yes,#e4b3d3
+lock_diagrams,demo_page_2.svg,US-letter,Level 4,P3 P5 P5 P6 __,no,#e4b3d3
+lock_diagrams,demo_page_2.svg,US-letter,Level 4,P3 P4 P5 P6 __,no,#e4b3d3
+lock_diagrams,demo_page_2.svg,US-letter,Level 5,P9 P5,yes,#e4b3d3
+lock_diagrams,demo_page_2.svg,US-letter,Level 5,__ P9 P4 __ __,yes,#e4b3d3
+lock_diagrams,demo_page_2.svg,US-letter,Level 5,__ P8 P3 __ __,no,#e4b3d3
+lock_diagrams,demo_page_2.svg,US-letter,Level 6,P9 P3 P1,yes,green
+lock_diagrams,demo_page_2.svg,US-letter,Level 6,__ P9 P5 P3,yes,green
+lock_diagrams,demo_page_2.svg,US-letter,Level 6,__ P8 P6 P4 __,yes,green
+,,,,,,
+lock_diagrams,demo_page_3.svg,A4,Level 7,P9 P5 P5 P5,yes,green
+lock_diagrams,demo_page_3.svg,A4,Level 7,P8 P5 P5 P6 __,yes,green
+lock_diagrams,demo_page_3.svg,A4,Level 7,P9 P3 P9 P6 __,yes,green
+lock_diagrams,demo_page_3.svg,A4,Level 8,P9 P8 P5 P1 P0,yes,green
+lock_diagrams,demo_page_3.svg,A4,Level 8,P9 P1 P7 P2 P5 P0,yes,green
+lock_diagrams,demo_page_3.svg,A4,Level 8,P_ P_ P_ P_ P_,yes,green
+lock_diagrams,demo_page_3.svg,A4,Level 9,P9 P5 P5 P5,yes,yellow
+lock_diagrams,demo_page_3.svg,A4,Level 9,P8 P5 P5 P6 __,yes,yellow
+lock_diagrams,demo_page_3.svg,A4,Level 9,P9 P3 P9 P6 __,yes,yellow
+,,,,,,
+lock_diagrams,demo_page_4.svg,US-letter,Level 15,S3 P7,yes,orange
+lock_diagrams,demo_page_4.svg,US-letter,Level 15,S9 __ P0 __,yes,orange
+lock_diagrams,demo_page_4.svg,US-letter,Level 16,__ G5 P3 __ __,yes,orange
+lock_diagrams,demo_page_4.svg,US-letter,Level 16,__ G3 P6 __,yes,orange
+lock_diagrams,demo_page_4.svg,US-letter,Level 17,__ S7 __ P3 __,yes,grey
+lock_diagrams,demo_page_4.svg,US-letter,Level 18,G7 P3 __ __ __,yes,grey
+lock_diagrams,demo_page_4.svg,US-letter,Level 19,__ S4 P7 P8 __,yes,grey
+lock_diagrams,demo_page_4.svg,US-letter,Level 20,G_ P_ P_,no,grey
