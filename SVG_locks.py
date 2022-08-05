@@ -384,7 +384,6 @@ def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, color
     <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
     <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="{color}" stroke-width="5.0"/>
 </g>  <!-- id="lock_holder_outline_{kind}" -->
-
 '''
 
     result = []
