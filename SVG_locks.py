@@ -91,11 +91,12 @@ def ruler_guide(x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
     <text x="718.1" y="-14" text-anchor="middle" font-size="8">190</text>
     <text x="755.9" y="-14" text-anchor="middle" font-size="8">200mm</text>
 </g>  <!-- id="ruler_guide" -->
+
 '''
     result = []
     for line in template_ruler.format(x=x,y=y,scale=scale, rotate=rotate).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
     return "\n".join(result)
@@ -169,7 +170,7 @@ def alignment_mark(kind="empty", x=0.0, y=0.0, scale=1.0, indent=0):
     result = []
     for line in template.splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
     return "\n".join(result)
@@ -199,7 +200,7 @@ def spring(length=0, x=0.0, y=0.0, scale=0.0, indent=0):
     result = []
     for line in adj_template.splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
     return "\n".join(result)
@@ -248,7 +249,7 @@ def pin(kind="plain", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, inden
     result = []
     for line in template.splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
     return "\n".join(result)
@@ -256,8 +257,7 @@ def pin(kind="plain", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, inden
 
 ############################################################
 def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
-    template_start = '''
-<g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
+    template_start = '''<g id="lock_{config}" transform="translate({x} {y}) scale({scale} {scale})">
     <mask id="lock_mask">
         <path id="printable_mask" d="M -950,-280 l 1500,0 0,950 -1500,0 Z" fill="white" stroke="none"/>
     </mask>
@@ -283,7 +283,7 @@ def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
     x3 =  150*(slots/2.0) + 150
     for line in template_start.format(x=x,y=y,xx0=xx0,xx1=xx1,xx2=xx2,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,config=config).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
@@ -330,7 +330,7 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
     result = []
     for line in template_start.format(x=x,y=y,scale=scale,config="".join(config_spec)).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
@@ -341,8 +341,7 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
         result.append(" "*4*(indent+2) + template_mask.format(n=n,x=offset,y=230+pin*10))
     result.append(" "*4*(indent+1) + "</mask>")
 
-    template_key = '''
-    <path id="visible_printable_mask" d="M -950,-200 l 1500,0 0,950 -1500,0 Z" fill="none" stroke="none"/>
+    template_key = '''    <path id="visible_printable_mask" d="M -950,-200 l 1500,0 0,950 -1500,0 Z" fill="none" stroke="none"/>
     <path id="key_outline_rail" d="m {xr},200  200,200  -100,100  -100,0 L {xl},500 l 0,-300 Z" fill="#6e6e6e" stroke="black" mask="url(#key_mask_{config})"/>
     <path id="key_outline_groove0" d="M {xl},350  {xr},350 l 150,0 -50,-50 L {xr},300 {xl},300 Z" fill="#999999" stroke="none" mask="url(#key_mask_{config})"/>
     <path id="key_outline_groove1" d="M {xl},475  {xr},475 l 125,0 50,-50 L {xr},425 {xl},425 Z" fill="#474747" stroke="none" mask="url(#key_mask_{config})"/>
@@ -353,7 +352,7 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
     <circle id="key_outline_handle_hole" cx="{xl0}" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0" mask="url(#key_mask_{config})"/>'''
     for line in template_key.format(xl0=xl-500,xl=xl-150,xr=xr+50,config="".join(config_spec)).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
@@ -365,22 +364,18 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
 def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, color="black", indent=0):
     template_start = '''
 <g id="lock_holder_outline_{kind}" transform="translate({x} {y}) scale({scale} {scale})">'''
-    template_plain = '''
-    <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="{color}" stroke-width="5.0"/>
+    template_plain = '''    <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="{color}" stroke-width="5.0"/>
     <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>'''
-    template_notch = '''
-    <path id="lock_hole_notch" d="
+    template_notch = '''    <path id="lock_hole_notch" d="
         M -907,-132
         A 915,915 0 0 1  907,-132
         A 150,150 0 0 0  907, 132
         A 915,915 0 0 1 -907, 132
         A 150,150 0 0 0 -907,-132 Z" fill="none" stroke="{color}" stroke-width="5.0"/>
     <path id="lock_hole_notch_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>'''
-    template_nut_recess = '''
-    <path id="lock_nut_recess" transform="translate(0 -2600) scale(4.08)" d="
+    template_nut_recess = '''    <path id="lock_nut_recess" transform="translate(0 -2600) scale(4.08)" d="
         M 100,0  50,86.6 -50,86.6 -100,0 -50,-86.6 50,-86.6 100,0 50,0 A 50,50 0 1 0 50,0.001 Z" fill="yellow" stroke="none"/>'''
-    template_end = '''
-    <path d="
+    template_end = '''    <path d="
         M  1850, 1000  a 400,400 90 0 1  -400,  400
         l -2900,    0  a 400,400 90 0 1  -400, -400
         l     0,-3800  a 400,400 90 0 1   400, -400
@@ -388,13 +383,14 @@ def lock_holder_outline(kind="plain", x=0.0, y=0.0, scale=1.0, rotate=0.0, color
         l     0, 3800" fill="none" stroke="{color}" stroke-width="5.0"/>
     <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
     <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="{color}" stroke-width="5.0"/>
-</g>  <!-- id="lock_holder_outline_{kind}" -->'''
+</g>  <!-- id="lock_holder_outline_{kind}" -->
 
+'''
 
     result = []
     for line in template_start.format(kind=kind,x=x,y=y,scale=scale,rotate=rotate).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
@@ -442,7 +438,7 @@ def lock_lever_outline(x=0.0, y=0.0, scale=1.0, rotate=0.0, mirror=False, color=
     result = []
     for line in template.format(x=x,y=y,scale=scale,rotate=rotate,color=color).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
     return "\n".join(result)
@@ -458,7 +454,7 @@ def lock_holder(lock_configuration, has_key=True, descr="", alignment=True, outl
     result = []
     for line in template_start.format(descr=descr,x=x,y=y,scale=scale).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
@@ -491,7 +487,7 @@ def paper_sheet(configs, kind="lock_diagrams", page_title=None, alignment=False,
     result = []
     for line in template_start.format(kind=kind,pagesize=pagesize).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
@@ -551,7 +547,7 @@ def plastic_cut_sheet(pagesize="12x12", kind="plastic_cut_sheet_a", page_title=N
     result = []
     for line in template_start.format(pagesize=pagesize, kind=kind).splitlines():
         if line == '':
-            result.append("\n")
+            result.append("")
         else:
             result.append(" "*4*indent + line)
 
