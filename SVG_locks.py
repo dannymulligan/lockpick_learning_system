@@ -2,30 +2,30 @@
 
 ############################################################
 def SVG_root(kind="start", pagesize="US-letter"):
-    template_start_letter = """<!-- comment -->
+    template_start_letter = '''<!-- comment -->
 <svg
     id="Layer_1"
     width="8.5in"
     height="11in"
     xmlns="http://www.w3.org/2000/svg">
-"""
-    template_start_A4 = """<!-- comment -->
+'''
+    template_start_A4 = '''<!-- comment -->
 <svg
     id="Layer_1"
     width="210mm"
     height="297mm"
     xmlns="http://www.w3.org/2000/svg">
-"""
-    template_start_12x12 = """<!-- comment -->
+'''
+    template_start_12x12 = '''<!-- comment -->
 <svg
     id="Layer_1"
     width="12in"
     height="12in"
     xmlns="http://www.w3.org/2000/svg">
-"""
-    template_tail = """
+'''
+    template_tail = '''
 </svg>
-"""
+'''
     if (kind=="start"):
         if   pagesize == "US-letter":  return template_start_letter
         elif pagesize == "A4"       :  return template_start_A4
@@ -207,9 +207,9 @@ def spring(length=0, x=0.0, y=0.0, scale=0.0, indent=0):
 
 
 ############################################################
-def pin(kind="plain", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, indent=0):
-    template_plain = '''
-<path id="plain_pin" transform="translate({x},{y})"
+def pin(kind="top", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, indent=0):
+    template_top = '''
+<path id="top_pin" transform="translate({x},{y})"
     d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
     fill="#ffd020" stroke="black" stroke-width="2.0"/>'''
     template_spool = '''
@@ -225,20 +225,20 @@ def pin(kind="plain", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, inden
     <path id="serrated_pin_lines" d="M -50, -20 L 50, -20  M -50,-30 L 50,-30  M -50, -40 L 50, -40  M -50,-50 L 50,-50  M -50, -60 L 50, -60
         M -50,-70 L 50,-70  M -50, -80 L 50, -80  M -50,-90 L 50,-90  M -50,-100 L 50,-100  M -50,-110 L 50,-110" fill="none" stroke="black" stroke-width="5.0"/>
 </g>  <!-- id="serrated_pin" -->'''
-    template_key = '''
-<g id="pin_{pin_length}" transform="translate({x},{y})">
-    <path id="pin_{pin_length}_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,{y0} Q 50,{y1} 45,{y2} L 5,{y3} Q 0,{y4} -5,{y3} L -45,{y2} Q -50,{y1} -50,{y0}  L -50,5 Q -50,0 -45,0 L 0,0"
+    template_bottom = '''
+<g id="bottom_pin_{pin_length}" transform="translate({x},{y})">
+    <path id="bottom_pin_{pin_length}_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,{y0} Q 50,{y1} 45,{y2} L 5,{y3} Q 0,{y4} -5,{y3} L -45,{y2} Q -50,{y1} -50,{y0}  L -50,5 Q -50,0 -45,0 L 0,0"
         fill="#ff{color0:02x}{color1:02x}" stroke="black" stroke-width="2.0"/>
     <text x="0" y="100" text-anchor="middle" font-size="80">{pin_label}</text>
 </g>  <!-- id="pin_{pin_length}" -->'''
 
-    if   kind == "plain"   :  template = template_plain.format(x=x,y=y)
+    if   kind == "top"     :  template = template_top.format(x=x,y=y)
     elif kind == "spool"   :  template = template_spool.format(x=x,y=y)
     elif kind == "serrated":  template = template_serrated.format(x=x,y=y)
-    elif kind == "key"     :
+    elif kind == "bottom"  :
         y4 = 150 + 10*pin_length
         y3, y2, y1, y0 = y4-5, y4-45, y4-50, y4-55
-        template = template_key.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,pin_label=pin_label,pin_length=pin_length,color0=pin_length*16,color1=255-pin_length*16)
+        template = template_bottom.format(x=x,y=y,y0=y0,y1=y1,y2=y2,y3=y3,y4=y4,pin_label=pin_label,pin_length=pin_length,color0=pin_length*16,color1=255-pin_length*16)
     result = []
     for line in template.splitlines():
         if line == '':
@@ -335,9 +335,9 @@ def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
     if has_key:
         result.append(key(config, x=0, y=-75, indent=indent+1))
 
-    # Then the springs, & pins
+    # Then the bottom pins, top pins, & springs
     for (offset,kind,pin_label) in [(150*(i+0.5-slots/2.0), config[i*3], config[i*3+1]) for i in range(slots)]:
-        if   (kind == "P") or (kind == "p"):  kind = "plain"
+        if   (kind == "P") or (kind == "p"):  kind = "top"
         elif (kind == "S") or (kind == "s"):  kind = "spool"
         elif (kind == "G") or (kind == "g"):  kind = "serrated"
         elif (kind == "_"):  continue
@@ -349,13 +349,13 @@ def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
             pin_length = int(pin_label)
 
         if has_key:
-            # Key inserted, tops of key pins line up with barrel
-            result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=0, indent=indent+1))
+            # Key inserted, tops of bottom pins line up with barrel
+            result.append(pin(kind="bottom", pin_label=pin_label, pin_length=pin_length, x=offset, y=0, indent=indent+1))
             result.append(pin(kind=kind, x=offset, y=0, indent=indent+1))
             result.append(spring(length=1, x=offset, y=-130, indent=indent+1))
         else:
-            # Key not inserted, bottoms of key pins line up with each other
-            result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=110-10*pin_length, indent=indent+1))
+            # Key not inserted, bottoms of bottom pins line up with each other
+            result.append(pin(kind="bottom", pin_label=pin_label, pin_length=pin_length, x=offset, y=110-10*pin_length, indent=indent+1))
             result.append(pin(kind=kind, x=offset, y=110-10*pin_length, indent=indent+1))
             result.append(spring(length=12-pin_length, x=offset, y=-20-10*pin_length, indent=indent+1))
 
@@ -543,7 +543,7 @@ def plastic_cut_sheet(pagesize="12x12", kind="plastic_cut_sheet_a", page_title=N
     #result.append(alignment_mark(kind="empty", x=1152, y=1152, scale=0.2, indent=indent+1))
     xoffset = 130
     xcenter = 1152 * 0.5
-    yoffset = 210
+    yoffset = 216
 
     result.append(ruler_guide(x=50, y=25, scale=1.0, rotate=90, indent=indent+1))
 
