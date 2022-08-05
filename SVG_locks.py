@@ -309,7 +309,7 @@ def lock(config, has_key, x=0.0, y=0.0, scale=1.0, indent=0):
             result.append(pin(kind="key", pin_label=pin_label, pin_length=pin_length, x=offset, y=110-10*pin_length, indent=indent+1))
             result.append(pin(kind=kind, x=offset, y=110-10*pin_length, indent=indent+1))
             result.append(spring(length=12-pin_length, x=offset, y=-20-10*pin_length, indent=indent+1))
-    result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->\n".format(config=config))
+    result.append(" "*4*indent + "</g>  <!-- id=\"lock_{config}\" -->".format(config=config))
     return "\n".join(result)
 
 
@@ -356,7 +356,7 @@ def key(config, x=0.0, y=0.0, scale=1.0, indent=0):
         else:
             result.append(" "*4*indent + line)
 
-    result.append(" "*4*indent + "</g>  <!-- id=\"key_{config}\" -->\n".format(config="".join(config_spec)))
+    result.append(" "*4*indent + "</g>  <!-- id=\"key_{config}\" -->".format(config="".join(config_spec)))
     return "\n".join(result)
 
 
