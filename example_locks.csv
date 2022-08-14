@@ -16,6 +16,7 @@ plastic_cut_sheet_b,demo_plastic_cut_sheet_b.svg,12x12,N/A,N/A,N/A,N/A
 paper_cut_sheet,demo_paper_cut_sheet_US-letter.svg,US-letter,N/A,N/A,N/A,N/A
 paper_cut_sheet,demo_paper_cut_sheet_A4.svg,A4,N/A,N/A,N/A,N/A
 ,,,,,,
+Type,Output filename,Page size,Name,Lock configuration,Show key,Name background color
 lock_diagrams,demo_page_1.svg,US-letter,Level 1,P5,yes,white
 lock_diagrams,demo_page_1.svg,US-letter,Level 1,__ P9 __,yes,white
 lock_diagrams,demo_page_1.svg,US-letter,Level 1,__ __ P0 __ __,yes,white
