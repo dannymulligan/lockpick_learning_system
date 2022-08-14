@@ -5,7 +5,7 @@ Valid options for the first cell on each line are…,,,,,,
     paper_cut_sheet,,,,,,
     lock_diagrams,,,,,,
     logo_sheets,,,,,,
-If the first cell must be blank or one of these options.,,,,,,
+(except without the leading spaces).  If the first cell is not one of these options it will be ignored.,,,,,,
 "The Show key column must contain ""yes"" or ""no"" (without the quotes).",,,,,,
 ,,,,,,
 Type,Output filename,Page size,Name,Lock configuration,Show key,Name background color
