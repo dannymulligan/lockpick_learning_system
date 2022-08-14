@@ -45,30 +45,25 @@ def ruler_guide(x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
     # 150 mm = 566.919 units
     template_ruler = '''
 <g id="ruler_guide" transform="translate({x} {y}) scale({scale} {scale}) rotate({rotate})">
-    <line id="ruler_line" x1="0" y1="0" x2="768" y2="0" fill="none" stroke="black" stroke-width="0.6"/>
+    <line id="ruler_line" x1="0" y1="0" x2="576" y2="0" fill="none" stroke="black" stroke-width="0.6"/>
     <path id="ruler_ticks_inch" d="
         M   0,0 l 0,10  M  96,0 l 0,10  M 192,0 l 0,10
         M 288,0 l 0,10  M 384,0 l 0,10  M 480,0 l 0,10
-        M 576,0 l 0,10  M 672,0 l 0,10  M 768,0 l 0,10
-        " fill="none" stroke="black" stroke-width="0.5"/>
+        M 576,0 l 0,10" fill="none" stroke="black" stroke-width="0.5"/>
     <text x="  5" y="10" text-anchor="left" font-size="10">0</text>
     <text x="101" y="10" text-anchor="left" font-size="10">1</text>
     <text x="197" y="10" text-anchor="left" font-size="10">2</text>
     <text x="293" y="10" text-anchor="left" font-size="10">3</text>
     <text x="389" y="10" text-anchor="left" font-size="10">4</text>
     <text x="485" y="10" text-anchor="left" font-size="10">5</text>
-    <text x="581" y="10" text-anchor="left" font-size="10">6</text>
-    <text x="677" y="10" text-anchor="left" font-size="10">7</text>
-    <text x="746" y="10" text-anchor="right" font-size="10">8 in</text>
+    <text x="581" y="10" text-anchor="left" font-size="10">6 in</text>
     <path id="ruler_ticks_mm" d="
         M   0.0,0 l 0,-10  M  37.8,0 l 0,-10  M  75.6,0 l 0,-10
         M 113.4,0 l 0,-10  M 151.2,0 l 0,-10  M 189.0,0 l 0,-10
         M 226.8,0 l 0,-10  M 264.6,0 l 0,-10  M 302.4,0 l 0,-10
         M 340.2,0 l 0,-10  M 377.9,0 l 0,-10  M 415.7,0 l 0,-10
         M 453.5,0 l 0,-10  M 491.3,0 l 0,-10  M 529.1,0 l 0,-10
-        M 566.9,0 l 0,-10  M 604.7,0 l 0,-10  M 642.5,0 l 0,-10
-        M 680.3,0 l 0,-10  M 718.1,0 l 0,-10  M 755.9,0 l 0,-10
-        " fill="none" stroke="black" stroke-width="0.5"/>
+        M 566.9,0 l 0,-10" fill="none" stroke="black" stroke-width="0.5"/>
     <text x="  0.0" y="-14" text-anchor="middle" font-size="8">0</text>
     <text x=" 37.8" y="-14" text-anchor="middle" font-size="8">10</text>
     <text x=" 75.6" y="-14" text-anchor="middle" font-size="8">20</text>
@@ -84,12 +79,7 @@ def ruler_guide(x=0.0, y=0.0, scale=1.0, rotate=0.0, indent=0):
     <text x="453.5" y="-14" text-anchor="middle" font-size="8">120</text>
     <text x="491.3" y="-14" text-anchor="middle" font-size="8">130</text>
     <text x="529.1" y="-14" text-anchor="middle" font-size="8">140</text>
-    <text x="566.9" y="-14" text-anchor="middle" font-size="8">150</text>
-    <text x="604.7" y="-14" text-anchor="middle" font-size="8">160</text>
-    <text x="642.5" y="-14" text-anchor="middle" font-size="8">170</text>
-    <text x="680.3" y="-14" text-anchor="middle" font-size="8">180</text>
-    <text x="718.1" y="-14" text-anchor="middle" font-size="8">190</text>
-    <text x="755.9" y="-14" text-anchor="middle" font-size="8">200mm</text>
+    <text x="566.9" y="-14" text-anchor="middle" font-size="8">150mm</text>
 </g>  <!-- id="ruler_guide" -->
 
 '''
@@ -250,12 +240,13 @@ def pin(kind="top", pin_label="", pin_length=0, x=0.0, y=0.0, scale=0.0, indent=
 
 ############################################################
 def lock_body(pin_slots, x=0.0, y=0.0, scale=1.0, indent=0):
-    template_start = '''<g id="lock_body_{pin_slots}">
-    <path id="lock_body_top" d="M {x0},-40 {x1},-40 {x1},0 {x2},0 {x2},-250 {x0},-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
-    <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+    template_start = '''<g id="lock_body_{pin_slots}_pins">
+    <path id="lock_body_top" d="M {x0},-40 {x1},-40 {x1},0 {x2},0 {x2},-250 {x0},-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>'''
+    template_pin = '''    <path id="pin_cavity_{n}" transform="translate({x},-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>'''
+    template_end = '''    <path id="spring_cover" d="M {x1},-225 {x2},-225  {x2},-235 {x1},-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
     <path id="lock_body_cylinder" d="M {xx0},-35 {xx1},-35 {xx1},5 {x3},5 {x3},440 {xx1},440 {xx1},480 {xx0},480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
     <path id="lock_body_bottom" d="M {x0},485 {x1},485 {x1},445 {x2},445 {x2},600 {x0},600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
-</g>  <!-- id="lock_body_{pin_slots}" -->"'''
+</g>  <!-- id="lock_body_{pin_slots}_pins" -->"'''
 
     xx0 = -150*(pin_slots/2.0) - 145
     x0  = -150*(pin_slots/2.0) - 100
@@ -264,7 +255,17 @@ def lock_body(pin_slots, x=0.0, y=0.0, scale=1.0, indent=0):
     x2  =  150*(pin_slots/2.0) + 50
     x3  =  150*(pin_slots/2.0) + 150
     result = []
-    for line in template_start.format(x=x,y=y,xx0=xx0,xx1=xx1,x0=x0,x1=x1,x2=x2,x3=x3,scale=scale,pin_slots=pin_slots).splitlines():
+    for line in template_start.format(x0=x0,x1=x1,x2=x2,x3=x3,pin_slots=pin_slots).splitlines():
+        if line == '':
+            result.append("")
+        else:
+            result.append(" "*4*indent + line)
+
+    for n in range(pin_slots):
+        x = -150.0*(n + 0.5 - pin_slots/2.0)
+        result.append(" "*4*indent + template_pin.format(n=n,x=x))
+
+    for line in template_end.format(xx0=xx0,xx1=xx1,x0=x0,x1=x1,x2=x2,x3=x3,pin_slots=pin_slots).splitlines():
         if line == '':
             result.append("")
         else:
@@ -485,7 +486,7 @@ def lock_holder(lock_configuration, has_key=True, descr="", descr_color=None, al
             result.append(" "*4*indent + line)
 
     if lock_configuration is not None:
-        result.append(lock(config=lock_configuration, has_key=has_key, x=500, y=-2450, scale=2.4, indent=indent+1))
+        result.append(lock(config=lock_configuration, has_key=has_key, x=500, y=-2350, scale=2.4, indent=indent+1))
 
     if outline:
         result.append(lock_holder_outline(kind="plain", alignment=True, x=0, y=0, scale=1.0, indent=indent+1))
@@ -519,10 +520,10 @@ def paper_sheet(configs, kind="lock_diagrams", page_title=None, alignment=False,
         xcenter = 793.75*0.5
         yoffset = 3200*0.06 + (1122.5-3*4600*0.06-2*400*0.06)/2  # Center the grid of lock_holder vertically on the page
 
-    result.append(ruler_guide(x=20, y=60, scale=1.0, indent=indent+1))
+    result.append(ruler_guide(x=100, y=100, scale=1.0, indent=indent+1))
 
     if page_title:
-        result.append(" "*4*indent + '''    <text id="page_title" x="{xcenter}" y="30" text-anchor="middle" font-size="16">{page_title}</text>'''.format(xcenter=xcenter,page_title=page_title))
+        result.append(" "*4*indent + '''    <text id="page_title" x="{xcenter}" y="50" text-anchor="middle" font-size="16">{page_title}</text>'''.format(xcenter=xcenter,page_title=page_title))
 
     if   (kind == "lock_diagrams"):
         for (n, (lock_configuration, has_key, description, description_color)) in enumerate(configs):
