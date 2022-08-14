@@ -1,0 +1,166 @@
+<!-- comment -->
+<svg
+    id="Layer_1"
+    width="210mm"
+    height="297mm"
+    xmlns="http://www.w3.org/2000/svg">
+    <g id="paper_cut_sheet_A4">
+
+        <g id="ruler_guide" transform="translate(100 100) scale(1.0 1.0) rotate(0.0)">
+            <line id="ruler_line" x1="0" y1="0" x2="576" y2="0" fill="none" stroke="black" stroke-width="0.6"/>
+            <path id="ruler_ticks_inch" d="
+                M   0,0 l 0,10  M  96,0 l 0,10  M 192,0 l 0,10
+                M 288,0 l 0,10  M 384,0 l 0,10  M 480,0 l 0,10
+                M 576,0 l 0,10" fill="none" stroke="black" stroke-width="0.5"/>
+            <text x="  5" y="10" text-anchor="left" font-size="10">0</text>
+            <text x="101" y="10" text-anchor="left" font-size="10">1</text>
+            <text x="197" y="10" text-anchor="left" font-size="10">2</text>
+            <text x="293" y="10" text-anchor="left" font-size="10">3</text>
+            <text x="389" y="10" text-anchor="left" font-size="10">4</text>
+            <text x="485" y="10" text-anchor="left" font-size="10">5</text>
+            <text x="581" y="10" text-anchor="left" font-size="10">6 in</text>
+            <path id="ruler_ticks_mm" d="
+                M   0.0,0 l 0,-10  M  37.8,0 l 0,-10  M  75.6,0 l 0,-10
+                M 113.4,0 l 0,-10  M 151.2,0 l 0,-10  M 189.0,0 l 0,-10
+                M 226.8,0 l 0,-10  M 264.6,0 l 0,-10  M 302.4,0 l 0,-10
+                M 340.2,0 l 0,-10  M 377.9,0 l 0,-10  M 415.7,0 l 0,-10
+                M 453.5,0 l 0,-10  M 491.3,0 l 0,-10  M 529.1,0 l 0,-10
+                M 566.9,0 l 0,-10" fill="none" stroke="black" stroke-width="0.5"/>
+            <text x="  0.0" y="-14" text-anchor="middle" font-size="8">0</text>
+            <text x=" 37.8" y="-14" text-anchor="middle" font-size="8">10</text>
+            <text x=" 75.6" y="-14" text-anchor="middle" font-size="8">20</text>
+            <text x="113.4" y="-14" text-anchor="middle" font-size="8">30</text>
+            <text x="151.2" y="-14" text-anchor="middle" font-size="8">40</text>
+            <text x="189.0" y="-14" text-anchor="middle" font-size="8">50</text>
+            <text x="226.8" y="-14" text-anchor="middle" font-size="8">60</text>
+            <text x="264.6" y="-14" text-anchor="middle" font-size="8">70</text>
+            <text x="302.4" y="-14" text-anchor="middle" font-size="8">80</text>
+            <text x="340.2" y="-14" text-anchor="middle" font-size="8">90</text>
+            <text x="377.9" y="-14" text-anchor="middle" font-size="8">100</text>
+            <text x="415.7" y="-14" text-anchor="middle" font-size="8">110</text>
+            <text x="453.5" y="-14" text-anchor="middle" font-size="8">120</text>
+            <text x="491.3" y="-14" text-anchor="middle" font-size="8">130</text>
+            <text x="529.1" y="-14" text-anchor="middle" font-size="8">140</text>
+            <text x="566.9" y="-14" text-anchor="middle" font-size="8">150mm</text>
+        </g>  <!-- id="ruler_guide" -->
+
+        <text id="page_title" x="396.875" y="50" text-anchor="middle" font-size="16">demo_paper_cut_sheet_A4.svg</text>
+
+        <g id="lock_holder_outline_plain" transform="translate(156.875 315.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(396.875 315.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(636.875 315.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(156.875 615.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(396.875 615.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(636.875 615.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(156.875 915.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(396.875 915.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+
+        <g id="lock_holder_outline_plain" transform="translate(636.875 915.25) scale(0.06 0.06)">
+            <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+            <path id="lock_holder_outer_edge" d="
+                M  1850, 1000  a 400,400 90 0 1  -400, 400
+                l -2900,    0  a 400,400 90 0 1  -400,-400
+                l     0,-3800  a 400,400 90 0 1   400,-400
+                l  2900,    0  a 400,400 90 0 1   400, 400
+                l     0, 3800" fill="none" stroke="red" stroke-width="5.0"/>
+            <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+            <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="red" stroke-width="5.0"/>
+        </g>  <!-- id="lock_holder_outline_plain" -->
+    </g>  <!-- id="paper_cut_sheet_A4" -->
+</svg>

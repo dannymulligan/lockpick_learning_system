@@ -1,0 +1,1612 @@
+<!-- comment -->
+<svg
+    id="Layer_1"
+    width="210mm"
+    height="297mm"
+    xmlns="http://www.w3.org/2000/svg">
+    <g id="paper_lock_diagrams_sheet_A4">
+
+        <g id="ruler_guide" transform="translate(100 100) scale(1.0 1.0) rotate(0.0)">
+            <line id="ruler_line" x1="0" y1="0" x2="576" y2="0" fill="none" stroke="black" stroke-width="0.6"/>
+            <path id="ruler_ticks_inch" d="
+                M   0,0 l 0,10  M  96,0 l 0,10  M 192,0 l 0,10
+                M 288,0 l 0,10  M 384,0 l 0,10  M 480,0 l 0,10
+                M 576,0 l 0,10" fill="none" stroke="black" stroke-width="0.5"/>
+            <text x="  5" y="10" text-anchor="left" font-size="10">0</text>
+            <text x="101" y="10" text-anchor="left" font-size="10">1</text>
+            <text x="197" y="10" text-anchor="left" font-size="10">2</text>
+            <text x="293" y="10" text-anchor="left" font-size="10">3</text>
+            <text x="389" y="10" text-anchor="left" font-size="10">4</text>
+            <text x="485" y="10" text-anchor="left" font-size="10">5</text>
+            <text x="581" y="10" text-anchor="left" font-size="10">6 in</text>
+            <path id="ruler_ticks_mm" d="
+                M   0.0,0 l 0,-10  M  37.8,0 l 0,-10  M  75.6,0 l 0,-10
+                M 113.4,0 l 0,-10  M 151.2,0 l 0,-10  M 189.0,0 l 0,-10
+                M 226.8,0 l 0,-10  M 264.6,0 l 0,-10  M 302.4,0 l 0,-10
+                M 340.2,0 l 0,-10  M 377.9,0 l 0,-10  M 415.7,0 l 0,-10
+                M 453.5,0 l 0,-10  M 491.3,0 l 0,-10  M 529.1,0 l 0,-10
+                M 566.9,0 l 0,-10" fill="none" stroke="black" stroke-width="0.5"/>
+            <text x="  0.0" y="-14" text-anchor="middle" font-size="8">0</text>
+            <text x=" 37.8" y="-14" text-anchor="middle" font-size="8">10</text>
+            <text x=" 75.6" y="-14" text-anchor="middle" font-size="8">20</text>
+            <text x="113.4" y="-14" text-anchor="middle" font-size="8">30</text>
+            <text x="151.2" y="-14" text-anchor="middle" font-size="8">40</text>
+            <text x="189.0" y="-14" text-anchor="middle" font-size="8">50</text>
+            <text x="226.8" y="-14" text-anchor="middle" font-size="8">60</text>
+            <text x="264.6" y="-14" text-anchor="middle" font-size="8">70</text>
+            <text x="302.4" y="-14" text-anchor="middle" font-size="8">80</text>
+            <text x="340.2" y="-14" text-anchor="middle" font-size="8">90</text>
+            <text x="377.9" y="-14" text-anchor="middle" font-size="8">100</text>
+            <text x="415.7" y="-14" text-anchor="middle" font-size="8">110</text>
+            <text x="453.5" y="-14" text-anchor="middle" font-size="8">120</text>
+            <text x="491.3" y="-14" text-anchor="middle" font-size="8">130</text>
+            <text x="529.1" y="-14" text-anchor="middle" font-size="8">140</text>
+            <text x="566.9" y="-14" text-anchor="middle" font-size="8">150mm</text>
+        </g>  <!-- id="ruler_guide" -->
+
+        <text id="page_title" x="396.875" y="50" text-anchor="middle" font-size="16">demo_page_3.svg</text>
+
+        <g id="lock_holder" transform="translate(156.875 315.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="green" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 7</text>
+            <g id="lock_P9 P5 P5 P5" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_4_pins">
+                    <path id="lock_body_top" d="M -400.0,-40 -350.0,-40 -350.0,0 350.0,0 350.0,-250 -400.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(225.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(75.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-75.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-225.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -350.0,-225 350.0,-225  350.0,-235 -350.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -445.0,-35 -355.0,-35 -355.0,5 450.0,5 450.0,440 -355.0,440 -355.0,480 -445.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -400.0,485 -350.0,485 -350.0,445 350.0,445 350.0,600 -400.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_4_pins" -->"
+
+                <g id="key_9555" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 350.0,200  200,200  -100,100  -100,0 L -450.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -450.0,350  350.0,350 l 150,0 -50,-50 L 350.0,300 -450.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -450.0,475  350.0,475 l 125,0 50,-50 L 350.0,425 -450.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -450.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-800.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-225.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-75.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(75.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(225.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_9555" -->
+
+                <g id="bottom_pin_9" transform="translate(-225.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(-225.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-225.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(-75.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(-75.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-75.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(75.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(75.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(75.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(225.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(225.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(225.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P9 P5 P5 P5</text>
+            </g>  <!-- id="lock_P9 P5 P5 P5" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(396.875 315.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="green" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 7</text>
+            <g id="lock_P8 P5 P5 P6 __" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_5_pins">
+                    <path id="lock_body_top" d="M -475.0,-40 -425.0,-40 -425.0,0 425.0,0 425.0,-250 -475.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-0.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -425.0,-225 425.0,-225  425.0,-235 -425.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -520.0,-35 -430.0,-35 -430.0,5 525.0,5 525.0,440 -430.0,440 -430.0,480 -520.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -475.0,485 -425.0,485 -425.0,445 425.0,445 425.0,600 -475.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_5_pins" -->"
+
+                <g id="key_85565" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 425.0,200  200,200  -100,100  -100,0 L -525.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -525.0,350  425.0,350 l 150,0 -50,-50 L 425.0,300 -525.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -525.0,475  425.0,475 l 125,0 50,-50 L 425.0,425 -525.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -525.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-875.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-300.0,310)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-150.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(0.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(150.0,290)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(300.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_85565" -->
+
+                <g id="bottom_pin_8" transform="translate(-300.0,0)">
+                    <path id="bottom_pin_8_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,175 Q 50,180 45,185 L 5,225 Q 0,230 -5,225 L -45,185 Q -50,180 -50,175  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff807f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">8</text>
+                </g>  <!-- id="pin_8" -->
+
+                <path id="top_pin" transform="translate(-300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(-150.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(-150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(0.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(0.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(0.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_6" transform="translate(150.0,0)">
+                    <path id="bottom_pin_6_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,155 Q 50,160 45,165 L 5,205 Q 0,210 -5,205 L -45,165 Q -50,160 -50,155  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff609f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">6</text>
+                </g>  <!-- id="pin_6" -->
+
+                <path id="top_pin" transform="translate(150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P8 P5 P5 P6 __</text>
+            </g>  <!-- id="lock_P8 P5 P5 P6 __" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(636.875 315.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="green" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 7</text>
+            <g id="lock_P9 P3 P9 P6 __" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_5_pins">
+                    <path id="lock_body_top" d="M -475.0,-40 -425.0,-40 -425.0,0 425.0,0 425.0,-250 -475.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-0.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -425.0,-225 425.0,-225  425.0,-235 -425.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -520.0,-35 -430.0,-35 -430.0,5 525.0,5 525.0,440 -430.0,440 -430.0,480 -520.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -475.0,485 -425.0,485 -425.0,445 425.0,445 425.0,600 -475.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_5_pins" -->"
+
+                <g id="key_93965" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 425.0,200  200,200  -100,100  -100,0 L -525.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -525.0,350  425.0,350 l 150,0 -50,-50 L 425.0,300 -525.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -525.0,475  425.0,475 l 125,0 50,-50 L 425.0,425 -525.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -525.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-875.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-300.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-150.0,260)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(0.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(150.0,290)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(300.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_93965" -->
+
+                <g id="bottom_pin_9" transform="translate(-300.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(-300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_3" transform="translate(-150.0,0)">
+                    <path id="bottom_pin_3_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,125 Q 50,130 45,135 L 5,175 Q 0,180 -5,175 L -45,135 Q -50,130 -50,125  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff30cf" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">3</text>
+                </g>  <!-- id="pin_3" -->
+
+                <path id="top_pin" transform="translate(-150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_9" transform="translate(0.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(0.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(0.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_6" transform="translate(150.0,0)">
+                    <path id="bottom_pin_6_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,155 Q 50,160 45,165 L 5,205 Q 0,210 -5,205 L -45,165 Q -50,160 -50,155  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff609f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">6</text>
+                </g>  <!-- id="pin_6" -->
+
+                <path id="top_pin" transform="translate(150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P9 P3 P9 P6 __</text>
+            </g>  <!-- id="lock_P9 P3 P9 P6 __" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(156.875 615.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="green" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 8</text>
+            <g id="lock_P9 P8 P5 P1 P0" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_5_pins">
+                    <path id="lock_body_top" d="M -475.0,-40 -425.0,-40 -425.0,0 425.0,0 425.0,-250 -475.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-0.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -425.0,-225 425.0,-225  425.0,-235 -425.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -520.0,-35 -430.0,-35 -430.0,5 525.0,5 525.0,440 -430.0,440 -430.0,480 -520.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -475.0,485 -425.0,485 -425.0,445 425.0,445 425.0,600 -475.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_5_pins" -->"
+
+                <g id="key_98510" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 425.0,200  200,200  -100,100  -100,0 L -525.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -525.0,350  425.0,350 l 150,0 -50,-50 L 425.0,300 -525.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -525.0,475  425.0,475 l 125,0 50,-50 L 425.0,425 -525.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -525.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-875.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-300.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-150.0,310)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(0.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(150.0,240)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(300.0,230)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_98510" -->
+
+                <g id="bottom_pin_9" transform="translate(-300.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(-300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_8" transform="translate(-150.0,0)">
+                    <path id="bottom_pin_8_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,175 Q 50,180 45,185 L 5,225 Q 0,230 -5,225 L -45,185 Q -50,180 -50,175  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff807f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">8</text>
+                </g>  <!-- id="pin_8" -->
+
+                <path id="top_pin" transform="translate(-150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(0.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(0.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(0.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_1" transform="translate(150.0,0)">
+                    <path id="bottom_pin_1_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,105 Q 50,110 45,115 L 5,155 Q 0,160 -5,155 L -45,115 Q -50,110 -50,105  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff10ef" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">1</text>
+                </g>  <!-- id="pin_1" -->
+
+                <path id="top_pin" transform="translate(150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_0" transform="translate(300.0,0)">
+                    <path id="bottom_pin_0_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,95 Q 50,100 45,105 L 5,145 Q 0,150 -5,145 L -45,105 Q -50,100 -50,95  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff00ff" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">0</text>
+                </g>  <!-- id="pin_0" -->
+
+                <path id="top_pin" transform="translate(300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P9 P8 P5 P1 P0</text>
+            </g>  <!-- id="lock_P9 P8 P5 P1 P0" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(396.875 615.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="green" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 8</text>
+            <g id="lock_P9 P1 P7 P2 P5 P0" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_6_pins">
+                    <path id="lock_body_top" d="M -550.0,-40 -500.0,-40 -500.0,0 500.0,0 500.0,-250 -550.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(375.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(225.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(75.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-75.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-225.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_5" transform="translate(-375.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -500.0,-225 500.0,-225  500.0,-235 -500.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -595.0,-35 -505.0,-35 -505.0,5 600.0,5 600.0,440 -505.0,440 -505.0,480 -595.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -550.0,485 -500.0,485 -500.0,445 500.0,445 500.0,600 -550.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_6_pins" -->"
+
+                <g id="key_917250" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 500.0,200  200,200  -100,100  -100,0 L -600.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -600.0,350  500.0,350 l 150,0 -50,-50 L 500.0,300 -600.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -600.0,475  500.0,475 l 125,0 50,-50 L 500.0,425 -600.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -600.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-950.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-375.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-225.0,240)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(-75.0,300)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(75.0,250)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(225.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_5" transform="translate(375.0,230)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_917250" -->
+
+                <g id="bottom_pin_9" transform="translate(-375.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(-375.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-375.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_1" transform="translate(-225.0,0)">
+                    <path id="bottom_pin_1_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,105 Q 50,110 45,115 L 5,155 Q 0,160 -5,155 L -45,115 Q -50,110 -50,105  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff10ef" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">1</text>
+                </g>  <!-- id="pin_1" -->
+
+                <path id="top_pin" transform="translate(-225.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-225.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_7" transform="translate(-75.0,0)">
+                    <path id="bottom_pin_7_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,165 Q 50,170 45,175 L 5,215 Q 0,220 -5,215 L -45,175 Q -50,170 -50,165  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff708f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">7</text>
+                </g>  <!-- id="pin_7" -->
+
+                <path id="top_pin" transform="translate(-75.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-75.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_2" transform="translate(75.0,0)">
+                    <path id="bottom_pin_2_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,115 Q 50,120 45,125 L 5,165 Q 0,170 -5,165 L -45,125 Q -50,120 -50,115  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff20df" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">2</text>
+                </g>  <!-- id="pin_2" -->
+
+                <path id="top_pin" transform="translate(75.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(75.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(225.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(225.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(225.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_0" transform="translate(375.0,0)">
+                    <path id="bottom_pin_0_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,95 Q 50,100 45,105 L 5,145 Q 0,150 -5,145 L -45,105 Q -50,100 -50,95  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff00ff" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">0</text>
+                </g>  <!-- id="pin_0" -->
+
+                <path id="top_pin" transform="translate(375.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(375.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P9 P1 P7 P2 P5 P0</text>
+            </g>  <!-- id="lock_P9 P1 P7 P2 P5 P0" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(636.875 615.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="green" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 8</text>
+            <g id="lock_P_ P_ P_ P_ P_" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_5_pins">
+                    <path id="lock_body_top" d="M -475.0,-40 -425.0,-40 -425.0,0 425.0,0 425.0,-250 -475.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-0.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -425.0,-225 425.0,-225  425.0,-235 -425.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -520.0,-35 -430.0,-35 -430.0,5 525.0,5 525.0,440 -430.0,440 -430.0,480 -520.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -475.0,485 -425.0,485 -425.0,445 425.0,445 425.0,600 -475.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_5_pins" -->"
+
+                <g id="key_55555" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 425.0,200  200,200  -100,100  -100,0 L -525.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -525.0,350  425.0,350 l 150,0 -50,-50 L 425.0,300 -525.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -525.0,475  425.0,475 l 125,0 50,-50 L 425.0,425 -525.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -525.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-875.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-300.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-150.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(0.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(150.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(300.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_55555" -->
+
+                <g id="bottom_pin_5" transform="translate(-300.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80"></text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(-300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(-150.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80"></text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(-150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(0.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80"></text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(0.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(0.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(150.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80"></text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(300.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80"></text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P_ P_ P_ P_ P_</text>
+            </g>  <!-- id="lock_P_ P_ P_ P_ P_" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(156.875 915.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="yellow" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 9</text>
+            <g id="lock_P9 P5 P5 P5" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_4_pins">
+                    <path id="lock_body_top" d="M -400.0,-40 -350.0,-40 -350.0,0 350.0,0 350.0,-250 -400.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(225.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(75.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-75.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-225.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -350.0,-225 350.0,-225  350.0,-235 -350.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -445.0,-35 -355.0,-35 -355.0,5 450.0,5 450.0,440 -355.0,440 -355.0,480 -445.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -400.0,485 -350.0,485 -350.0,445 350.0,445 350.0,600 -400.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_4_pins" -->"
+
+                <g id="key_9555" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 350.0,200  200,200  -100,100  -100,0 L -450.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -450.0,350  350.0,350 l 150,0 -50,-50 L 350.0,300 -450.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -450.0,475  350.0,475 l 125,0 50,-50 L 350.0,425 -450.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -450.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-800.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-225.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-75.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(75.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(225.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_9555" -->
+
+                <g id="bottom_pin_9" transform="translate(-225.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(-225.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-225.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(-75.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(-75.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-75.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(75.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(75.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(75.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(225.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(225.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(225.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P9 P5 P5 P5</text>
+            </g>  <!-- id="lock_P9 P5 P5 P5" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(396.875 915.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="yellow" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 9</text>
+            <g id="lock_P8 P5 P5 P6 __" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_5_pins">
+                    <path id="lock_body_top" d="M -475.0,-40 -425.0,-40 -425.0,0 425.0,0 425.0,-250 -475.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-0.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -425.0,-225 425.0,-225  425.0,-235 -425.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -520.0,-35 -430.0,-35 -430.0,5 525.0,5 525.0,440 -430.0,440 -430.0,480 -520.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -475.0,485 -425.0,485 -425.0,445 425.0,445 425.0,600 -475.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_5_pins" -->"
+
+                <g id="key_85565" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 425.0,200  200,200  -100,100  -100,0 L -525.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -525.0,350  425.0,350 l 150,0 -50,-50 L 425.0,300 -525.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -525.0,475  425.0,475 l 125,0 50,-50 L 425.0,425 -525.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -525.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-875.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-300.0,310)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-150.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(0.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(150.0,290)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(300.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_85565" -->
+
+                <g id="bottom_pin_8" transform="translate(-300.0,0)">
+                    <path id="bottom_pin_8_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,175 Q 50,180 45,185 L 5,225 Q 0,230 -5,225 L -45,185 Q -50,180 -50,175  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff807f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">8</text>
+                </g>  <!-- id="pin_8" -->
+
+                <path id="top_pin" transform="translate(-300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(-150.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(-150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_5" transform="translate(0.0,0)">
+                    <path id="bottom_pin_5_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,145 Q 50,150 45,155 L 5,195 Q 0,200 -5,195 L -45,155 Q -50,150 -50,145  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff50af" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">5</text>
+                </g>  <!-- id="pin_5" -->
+
+                <path id="top_pin" transform="translate(0.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(0.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_6" transform="translate(150.0,0)">
+                    <path id="bottom_pin_6_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,155 Q 50,160 45,165 L 5,205 Q 0,210 -5,205 L -45,165 Q -50,160 -50,155  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff609f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">6</text>
+                </g>  <!-- id="pin_6" -->
+
+                <path id="top_pin" transform="translate(150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P8 P5 P5 P6 __</text>
+            </g>  <!-- id="lock_P8 P5 P5 P6 __" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+
+        <g id="lock_holder" transform="translate(636.875 915.25) scale(0.06 0.06)">
+            <path id="descr_color" d="M 1850,1000 a 400,400 0 0 1 -400,400 l -2900,0 a 400,400 0 0 1 -400,-400
+                l 0,-200 l 3700,0 l 0,200 z" fill="yellow" stroke="none" fill-opacity="0.2"/>
+            <text x="0" y="1200" text-anchor="middle" font-size="240">Level 9</text>
+            <g id="lock_P9 P3 P9 P6 __" transform="translate(500 -2350) scale(2.4)">
+                <g id="lock_body_5_pins">
+                    <path id="lock_body_top" d="M -475.0,-40 -425.0,-40 -425.0,0 425.0,0 425.0,-250 -475.0,-250 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                    <path id="pin_cavity_0" transform="translate(300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_1" transform="translate(150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_2" transform="translate(-0.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_3" transform="translate(-150.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="pin_cavity_4" transform="translate(-300.0,-250)" d="M -60,-0.0 60,0.0 60,250.0 -60,250.0 Z" fill="#efdaaf" stroke="black" stroke-width="1.0"/>
+                    <path id="spring_cover" d="M -425.0,-225 425.0,-225  425.0,-235 -425.0,-235 Z" fill="grey" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_cylinder" d="M -520.0,-35 -430.0,-35 -430.0,5 525.0,5 525.0,440 -430.0,440 -430.0,480 -520.0,480 Z" fill="#ffff88" stroke="black" stroke-width="2.0"/>
+                    <path id="lock_body_bottom" d="M -475.0,485 -425.0,485 -425.0,445 425.0,445 425.0,600 -475.0,600 Z" fill="#efeabf" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="lock_body_5_pins" -->"
+
+                <g id="key_93965" transform="translate(0 -75) scale(1.0 1.0)">
+                    <path id="key_outline_rail" d="m 425.0,200  200,200  -100,100  -100,0 L -525.0,500 l 0,-300 Z" fill="#9e9e9e" stroke="black"/>
+                    <path id="key_outline_groove0" d="M -525.0,350  425.0,350 l 150,0 -50,-50 L 425.0,300 -525.0,300 Z" fill="#b9b9b9" stroke="none"/>
+                    <path id="key_outline_groove1" d="M -525.0,475  425.0,475 l 125,0 50,-50 L 425.0,425 -525.0,425 Z" fill="#848484" stroke="none"/>
+                    <path id="key_outline_handle" d="
+                        m -525.0,200 0,-50 -50,0  0,-50 a 100,100 0 0 0 -100,-100 l -250,0
+                        a 100,100 0 0 0 -100,100 l 0,500 a 100,100 0 0 0 100,100 l 250,0
+                        a 100,100 0 0 0 100,-100 l 0,-50  50,0 Z" fill="#9e9e9e" stroke="black" stroke-width="5.0"/>
+                    <circle id="key_outline_handle_hole" cx="-875.0" cy="350" r="80" fill="white" stroke="black" stroke-width="5.0"/>
+                    <path id="key_cut_0" transform="translate(-300.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_1" transform="translate(-150.0,260)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_2" transform="translate(0.0,320)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_3" transform="translate(150.0,290)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                    <path id="key_cut_4" transform="translate(300.0,280)" d="M 0,0 l 25,0 125,-125 -300,0 125,125 25,0 Z" fill="#ffff88" stroke="none"/>
+                </g>  <!-- id="key_93965" -->
+
+                <g id="bottom_pin_9" transform="translate(-300.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(-300.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-300.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_3" transform="translate(-150.0,0)">
+                    <path id="bottom_pin_3_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,125 Q 50,130 45,135 L 5,175 Q 0,180 -5,175 L -45,135 Q -50,130 -50,125  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff30cf" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">3</text>
+                </g>  <!-- id="pin_3" -->
+
+                <path id="top_pin" transform="translate(-150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(-150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_9" transform="translate(0.0,0)">
+                    <path id="bottom_pin_9_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,185 Q 50,190 45,195 L 5,235 Q 0,240 -5,235 L -45,195 Q -50,190 -50,185  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff906f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">9</text>
+                </g>  <!-- id="pin_9" -->
+
+                <path id="top_pin" transform="translate(0.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(0.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+
+                <g id="bottom_pin_6" transform="translate(150.0,0)">
+                    <path id="bottom_pin_6_shape" d="M 0,0 L 45,0 Q 50,0 50,5 L 50,155 Q 50,160 45,165 L 5,205 Q 0,210 -5,205 L -45,165 Q -50,160 -50,155  L -50,5 Q -50,0 -45,0 L 0,0"
+                        fill="#ff609f" stroke="black" stroke-width="2.0"/>
+                    <text x="0" y="100" text-anchor="middle" font-size="80">6</text>
+                </g>  <!-- id="pin_6" -->
+
+                <path id="top_pin" transform="translate(150.0,0)"
+                    d="M 0,-3 L 45,-3 Q 50,-3 50,-8 L 50,-122 Q 50,-127 45,-127 L -45,-127 Q -50,-127 -50,-122 L -50, -8 Q -50,-3 -45,-3  L 0,-3"
+                    fill="#ffd020" stroke="black" stroke-width="2.0"/>
+
+                <path id="spring_1" transform="translate(150.0,-130)" d="
+                    M -50,-0.0 0,-0.0 C  80,-0.0  50,-4.5 0,-4.5 C -80,-4.5 -50,-9.0 0,-9.0 C  80,-9.0
+                       50,-13.5 0,-13.5 C -80,-13.5 -50,-18.0 0,-18.0 C  80,-18.0  50,-22.5 0,-22.5 C -80,-22.5
+                      -50,-27.0 0,-27.0 C  80,-27.0  50,-31.5 0,-31.5 C -80,-31.5 -50,-36.0 0,-36.0 C  80,-36.0
+                       50,-40.5 0,-40.5 C -80,-40.5 -50,-45.0 0,-45.0 C  80,-45.0  50,-49.5 0,-49.5 C -80,-49.5
+                      -50,-54.0 0,-54.0 C  80,-54.0  50,-58.5 0,-58.5 C -80,-58.5 -50,-63.0 0,-63.0 C  80,-63.0
+                       50,-67.5 0,-67.5 C -80,-67.5 -50,-72.0 0,-72.0 C  80,-72.0  50,-76.5 0,-76.5 C -80,-76.5
+                      -50,-81.0 0,-81.0 C  80,-81.0  50,-85.5 0,-85.5 C -80,-85.5 -50,-90.0 0,-90.0 L  50,-90.0
+                    "  fill="none" stroke="black" stroke-width="4.0"/>
+                <text x="0" y="560" text-anchor="middle" font-size="90">P9 P3 P9 P6 __</text>
+            </g>  <!-- id="lock_P9 P3 P9 P6 __" -->
+
+            <g id="lock_holder_outline_plain" transform="translate(0 0) scale(1.0 1.0)">
+
+                <g id="alignment_SE" transform="translate(1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="-50" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="-45" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="-20" x2="-20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SE" -->
+
+                <g id="alignment_SW" transform="translate(-1850 1400) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="-50" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="-45" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="-20" x2="20" y2="-20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_SW" -->
+
+                <g id="alignment_NE" transform="translate(1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-50" y1="50" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-20" y1="45" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="-45" y1="20" x2="-20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NE" -->
+
+                <g id="alignment_NW" transform="translate(-1850 -3200) scale(1.0 1.0)">
+                    <line x1="100" y1="0" x2="-100" y2="0" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="0" y1="100" x2="0" y2="-100" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="50" y1="50" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="20" y1="45" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <line x1="45" y1="20" x2="20" y2="20" fill="none" stroke="black" stroke-width="2.0"/>
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2.0"/>
+                </g>  <!-- id="alignment_NW" -->
+                <circle id="lock_hole_circle" cx="0" cy="0" r="920" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_hole_center_crosshairs" d="M -80,0 80,-0 M 0,-80 0,80" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="lock_holder_outer_edge" d="
+                    M  1850, 1000  a 400,400 90 0 1  -400, 400
+                    l -2900,    0  a 400,400 90 0 1  -400,-400
+                    l     0,-3800  a 400,400 90 0 1   400,-400
+                    l  2900,    0  a 400,400 90 0 1   400, 400
+                    l     0, 3800" fill="none" stroke="black" stroke-width="5.0"/>
+                <path id="screw_hole_center_crosshairs" d="m 0,-2600 0,80 0,-160 0,80 80,0 -160,0 80,0" fill="none" stroke="black" stroke-width="5.0"/>
+                <circle id="screw_hole" cx="0" cy="-2600" r="200" fill="none" stroke="black" stroke-width="5.0"/>
+            </g>  <!-- id="lock_holder_outline_plain" -->
+        </g>  <!-- id="lock_holder" -->
+    </g>  <!-- id="paper_lock_diagrams_sheet_A4" -->
+</svg>
